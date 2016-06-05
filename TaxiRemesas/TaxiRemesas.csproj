@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B4CDCE60-8F71-4018-B1CB-1296B78565F7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TaxiRemesas</RootNamespace>
+    <AssemblyName>TaxiRemesas</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CID_Parser">
+      <HintPath>..\..\..\..\..\Downloads\CID_Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Autenticacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autenticacion.Designer.cs">
+      <DependentUpon>Autenticacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BD.cs" />
+    <Compile Include="CommunicationManager.cs" />
+    <Compile Include="frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfiguraModem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfiguraModem.Designer.cs">
+      <DependentUpon>frmConfiguraModem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUnidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUnidad.Designer.cs">
+      <DependentUpon>frmUnidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIAdministrador.Designer.cs">
+      <DependentUpon>MDIAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIUsuario.Designer.cs">
+      <DependentUpon>MDIUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperacionesDB.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="taxisDataSet.cs">
+      <DependentUpon>taxisDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="taxisDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>taxisDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Autenticacion.resx">
+      <DependentUpon>Autenticacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfiguraModem.resx">
+      <DependentUpon>frmConfiguraModem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUnidad.resx">
+      <DependentUpon>frmUnidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIAdministrador.resx">
+      <DependentUpon>MDIAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIUsuario.resx">
+      <DependentUpon>MDIUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="taxisDataSet.xsc">
+      <DependentUpon>taxisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="taxisDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>taxisDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="taxisDataSet.xss">
+      <DependentUpon>taxisDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\430-ciber-seguridad-ap.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sesion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mantenimiento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tablet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\centro-llamadas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HP-MSN-Dock-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportes.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disconnect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enviar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contestar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colgar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modificar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrar.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
