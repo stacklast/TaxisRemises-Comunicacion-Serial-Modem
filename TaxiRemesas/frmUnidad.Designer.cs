@@ -46,18 +46,16 @@
             this.txtColor = new System.Windows.Forms.TextBox();
             this.txtBuscarUnidad = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnBuscarUnidad = new System.Windows.Forms.Button();
             this.grbDatosUnidad = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnBuscarUnidad = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTablaUnidad)).BeginInit();
             this.grbDatosUnidad.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -206,15 +204,6 @@
             this.label10.TabIndex = 19;
             this.label10.Text = "Buscar Unidad:";
             // 
-            // btnBuscarUnidad
-            // 
-            this.btnBuscarUnidad.Location = new System.Drawing.Point(293, 19);
-            this.btnBuscarUnidad.Name = "btnBuscarUnidad";
-            this.btnBuscarUnidad.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarUnidad.TabIndex = 21;
-            this.btnBuscarUnidad.Text = "Buscar";
-            this.btnBuscarUnidad.UseVisualStyleBackColor = true;
-            // 
             // grbDatosUnidad
             // 
             this.grbDatosUnidad.Controls.Add(this.txtColor);
@@ -238,92 +227,114 @@
             this.grbDatosUnidad.TabStop = false;
             this.grbDatosUnidad.Text = "Datos de la Unidad";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnCancelar);
-            this.groupBox2.Controls.Add(this.btnEliminar);
-            this.groupBox2.Controls.Add(this.btnModificar);
-            this.groupBox2.Controls.Add(this.btnGuardar);
-            this.groupBox2.Location = new System.Drawing.Point(675, 15);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(110, 197);
-            this.groupBox2.TabIndex = 23;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Acciones";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(7, 116);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 3;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(7, 80);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(7, 55);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 1;
-            this.btnModificar.Text = "Mofificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(7, 20);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 0;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(540, 19);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 5;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnSalir);
             this.groupBox3.Controls.Add(this.btnBuscarUnidad);
             this.groupBox3.Controls.Add(this.txtBuscarUnidad);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(19, 160);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(630, 63);
+            this.groupBox3.Size = new System.Drawing.Size(439, 63);
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Image = global::TaxiRemesas.Properties.Resources.borrar;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(665, 117);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 39);
+            this.button1.TabIndex = 35;
+            this.button1.Text = "Eliminar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscarUnidad
+            // 
+            this.btnBuscarUnidad.Image = global::TaxiRemesas.Properties.Resources.buscar;
+            this.btnBuscarUnidad.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscarUnidad.Location = new System.Drawing.Point(304, 14);
+            this.btnBuscarUnidad.Name = "btnBuscarUnidad";
+            this.btnBuscarUnidad.Size = new System.Drawing.Size(108, 39);
+            this.btnBuscarUnidad.TabIndex = 21;
+            this.btnBuscarUnidad.Text = "Buscar";
+            this.btnBuscarUnidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarUnidad.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnBuscarUnidad.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Image = global::TaxiRemesas.Properties.Resources.salir;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(533, 173);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(108, 39);
+            this.button2.TabIndex = 31;
+            this.button2.Text = "Salir";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Image = global::TaxiRemesas.Properties.Resources.guardar;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(665, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(108, 39);
+            this.button3.TabIndex = 34;
+            this.button3.Text = "Guardar";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Image = global::TaxiRemesas.Properties.Resources.cancel;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(665, 174);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(108, 39);
+            this.button4.TabIndex = 32;
+            this.button4.Text = "Cancelar";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Image = global::TaxiRemesas.Properties.Resources.modificar1;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(665, 63);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(108, 39);
+            this.button5.TabIndex = 33;
+            this.button5.Text = "Modificar";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // frmUnidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 416);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.grbDatosUnidad);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.dgvTablaUnidad);
+            this.Controls.Add(this.button5);
             this.Name = "frmUnidad";
             this.Text = "frmUnidades";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTablaUnidad)).EndInit();
             this.grbDatosUnidad.ResumeLayout(false);
             this.grbDatosUnidad.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -352,12 +363,11 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnBuscarUnidad;
         private System.Windows.Forms.GroupBox grbDatosUnidad;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
