@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAplicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAplicacion.Designer.cs">
+      <DependentUpon>frmAplicacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Autenticacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,12 @@
     </Compile>
     <Compile Include="frmConfiguraModem.Designer.cs">
       <DependentUpon>frmConfiguraModem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrosLlamadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrosLlamadas.Designer.cs">
+      <DependentUpon>frmRegistrosLlamadas.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUnidad.cs">
       <SubType>Form</SubType>
@@ -100,6 +112,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>taxisDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmAplicacion.resx">
+      <DependentUpon>frmAplicacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Autenticacion.resx">
       <DependentUpon>Autenticacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConfiguraModem.resx">
       <DependentUpon>frmConfiguraModem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrosLlamadas.resx">
+      <DependentUpon>frmRegistrosLlamadas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUnidad.resx">
       <DependentUpon>frmUnidad.cs</DependentUpon>

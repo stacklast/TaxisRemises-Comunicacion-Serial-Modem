@@ -80,7 +80,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(302, 29);
+            this.label2.Location = new System.Drawing.Point(235, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 1;
@@ -107,7 +107,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(302, 64);
+            this.label5.Location = new System.Drawing.Point(235, 89);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 13);
             this.label5.TabIndex = 4;
@@ -129,16 +129,18 @@
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(363, 22);
+            this.txtDireccion.Location = new System.Drawing.Point(296, 26);
+            this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(100, 20);
+            this.txtDireccion.Size = new System.Drawing.Size(192, 54);
             this.txtDireccion.TabIndex = 8;
             // 
             // txtReferencia
             // 
-            this.txtReferencia.Location = new System.Drawing.Point(363, 61);
+            this.txtReferencia.Location = new System.Drawing.Point(296, 86);
+            this.txtReferencia.Multiline = true;
             this.txtReferencia.Name = "txtReferencia";
-            this.txtReferencia.Size = new System.Drawing.Size(100, 20);
+            this.txtReferencia.Size = new System.Drawing.Size(192, 59);
             this.txtReferencia.TabIndex = 9;
             // 
             // txtCelular
@@ -242,7 +244,7 @@
             this.grbDatosCliente.Controls.Add(this.label1);
             this.grbDatosCliente.Location = new System.Drawing.Point(24, 12);
             this.grbDatosCliente.Name = "grbDatosCliente";
-            this.grbDatosCliente.Size = new System.Drawing.Size(494, 139);
+            this.grbDatosCliente.Size = new System.Drawing.Size(494, 158);
             this.grbDatosCliente.TabIndex = 13;
             this.grbDatosCliente.TabStop = false;
             this.grbDatosCliente.Text = "Datos de Cliente";

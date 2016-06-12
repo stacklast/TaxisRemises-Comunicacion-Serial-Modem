@@ -42,6 +42,7 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.lblHoraActual = new System.Windows.Forms.Label();
             this.grbDatosInfo = new System.Windows.Forms.GroupBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -179,6 +180,11 @@
             this.grbDatosInfo.TabStop = false;
             this.grbDatosInfo.Text = "Datos Informativos";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // fileMenu
             // 
             this.fileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -223,7 +229,7 @@
             // 
             this.módemsToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.modem;
             this.módemsToolStripMenuItem.Name = "módemsToolStripMenuItem";
-            this.módemsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.módemsToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.módemsToolStripMenuItem.Text = "Módems";
             this.módemsToolStripMenuItem.Click += new System.EventHandler(this.módemsToolStripMenuItem_Click);
             // 
@@ -231,7 +237,7 @@
             // 
             this.usuariosToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.sesion;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
@@ -239,7 +245,7 @@
             // 
             this.unidadesToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.taxi;
             this.unidadesToolStripMenuItem.Name = "unidadesToolStripMenuItem";
-            this.unidadesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.unidadesToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.unidadesToolStripMenuItem.Text = "Unidades";
             this.unidadesToolStripMenuItem.Click += new System.EventHandler(this.unidadesToolStripMenuItem_Click);
             // 
@@ -247,7 +253,7 @@
             // 
             this.clientesToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources._15_clientes;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -326,6 +332,7 @@
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem unidadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

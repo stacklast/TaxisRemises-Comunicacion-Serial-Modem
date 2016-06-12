@@ -158,17 +158,7 @@ namespace TaxiRemesas
             // MessageBox.Show( "Formulario abierto");
         }
 #endregion
-        private void mostrarElementos()
-        {
-            string nombre_maquina = Environment.MachineName;
-            string fecha = DateTime.Now.ToShortDateString();
-            string hora = DateTime.Now.ToLongTimeString();
-            lblFecha.Text = fecha;
-            lblMaquina.Text = nombre_maquina;
-            lblHora.Text = hora;
-            toolStripUser.Text = this.user;
-        }
-   
+        
         
         private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -259,6 +249,19 @@ namespace TaxiRemesas
                 frmCli.WindowState = FormWindowState.Normal;
 
             frmCli.Show();
+        }
+        public void mostrarElementos()
+        {
+            string nombre_maquina = Environment.MachineName;
+            string fecha = DateTime.Now.ToShortDateString();
+            string hora = DateTime.Now.ToLongTimeString();
+            lblFecha.Text = fecha;
+            lblMaquina.Text = nombre_maquina;
+            lblHora.Text = hora;
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            mostrarElementos();
         }
     }
 }

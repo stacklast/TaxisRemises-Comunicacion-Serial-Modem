@@ -48,6 +48,7 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aplicaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.grbDatosInfo.SuspendLayout();
@@ -188,7 +189,7 @@
             // 
             this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(105, 22);
             this.toolStripMenuItem2.Text = "&Salir";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
@@ -248,6 +249,11 @@
             this.reportesToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.reportesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // MDIUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,6 +298,7 @@
         private System.Windows.Forms.Label lblMaquina;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblHoraActual;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

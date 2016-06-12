@@ -16,7 +16,7 @@ namespace TaxiRemesas
     public partial class frmConfiguraModem : Form
     {
         CommunicationManager comm = new CommunicationManager();
-        string transType = string.Empty;
+        //string transType = string.Empty;
         OperacionesDB ins = new OperacionesDB();
 
         public frmConfiguraModem()
