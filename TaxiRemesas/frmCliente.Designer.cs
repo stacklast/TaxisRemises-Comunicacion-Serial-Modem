@@ -28,31 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtReferencia = new System.Windows.Forms.TextBox();
             this.txtCelular = new System.Windows.Forms.TextBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.dgvTablaCliente = new System.Windows.Forms.DataGridView();
+            this.iDCLIENTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tELEFONODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cELULARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dIRECCIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rEFERENCIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nOMBREDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eSTADODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cLIENTESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.taxisDataSet = new TaxiRemesas.taxisDataSet();
             this.grbDatosCliente = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.txtBuscarCliente = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.cLIENTESTableAdapter = new TaxiRemesas.taxisDataSetTableAdapters.CLIENTESTableAdapter();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTablaCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cLIENTESBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taxisDataSet)).BeginInit();
             this.grbDatosCliente.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -102,15 +113,6 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Referencia:";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(302, 102);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Estado:";
-            // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(94, 32);
@@ -146,30 +148,93 @@
             this.txtCelular.Size = new System.Drawing.Size(100, 20);
             this.txtCelular.TabIndex = 10;
             // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(363, 99);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(100, 20);
-            this.txtEstado.TabIndex = 11;
-            // 
             // dgvTablaCliente
             // 
+            this.dgvTablaCliente.AllowUserToAddRows = false;
+            this.dgvTablaCliente.AllowUserToDeleteRows = false;
+            this.dgvTablaCliente.AllowUserToOrderColumns = true;
+            this.dgvTablaCliente.AutoGenerateColumns = false;
             this.dgvTablaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTablaCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDCLIENTEDataGridViewTextBoxColumn,
+            this.tELEFONODataGridViewTextBoxColumn,
+            this.cELULARDataGridViewTextBoxColumn,
+            this.dIRECCIONDataGridViewTextBoxColumn,
+            this.rEFERENCIADataGridViewTextBoxColumn,
+            this.nOMBREDataGridViewTextBoxColumn,
+            this.eSTADODataGridViewTextBoxColumn});
+            this.dgvTablaCliente.DataSource = this.cLIENTESBindingSource;
             this.dgvTablaCliente.Location = new System.Drawing.Point(12, 259);
+            this.dgvTablaCliente.MultiSelect = false;
             this.dgvTablaCliente.Name = "dgvTablaCliente";
+            this.dgvTablaCliente.ReadOnly = true;
+            this.dgvTablaCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTablaCliente.Size = new System.Drawing.Size(649, 186);
             this.dgvTablaCliente.TabIndex = 12;
+            this.dgvTablaCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTablaCliente_CellClick);
+            // 
+            // iDCLIENTEDataGridViewTextBoxColumn
+            // 
+            this.iDCLIENTEDataGridViewTextBoxColumn.DataPropertyName = "ID_CLIENTE";
+            this.iDCLIENTEDataGridViewTextBoxColumn.HeaderText = "NUM";
+            this.iDCLIENTEDataGridViewTextBoxColumn.Name = "iDCLIENTEDataGridViewTextBoxColumn";
+            this.iDCLIENTEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDCLIENTEDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // tELEFONODataGridViewTextBoxColumn
+            // 
+            this.tELEFONODataGridViewTextBoxColumn.DataPropertyName = "TELEFONO";
+            this.tELEFONODataGridViewTextBoxColumn.HeaderText = "TELEFONO";
+            this.tELEFONODataGridViewTextBoxColumn.Name = "tELEFONODataGridViewTextBoxColumn";
+            // 
+            // cELULARDataGridViewTextBoxColumn
+            // 
+            this.cELULARDataGridViewTextBoxColumn.DataPropertyName = "CELULAR";
+            this.cELULARDataGridViewTextBoxColumn.HeaderText = "CELULAR";
+            this.cELULARDataGridViewTextBoxColumn.Name = "cELULARDataGridViewTextBoxColumn";
+            // 
+            // dIRECCIONDataGridViewTextBoxColumn
+            // 
+            this.dIRECCIONDataGridViewTextBoxColumn.DataPropertyName = "DIRECCION";
+            this.dIRECCIONDataGridViewTextBoxColumn.HeaderText = "DIRECCION";
+            this.dIRECCIONDataGridViewTextBoxColumn.Name = "dIRECCIONDataGridViewTextBoxColumn";
+            // 
+            // rEFERENCIADataGridViewTextBoxColumn
+            // 
+            this.rEFERENCIADataGridViewTextBoxColumn.DataPropertyName = "REFERENCIA";
+            this.rEFERENCIADataGridViewTextBoxColumn.HeaderText = "REFERENCIA";
+            this.rEFERENCIADataGridViewTextBoxColumn.Name = "rEFERENCIADataGridViewTextBoxColumn";
+            // 
+            // nOMBREDataGridViewTextBoxColumn
+            // 
+            this.nOMBREDataGridViewTextBoxColumn.DataPropertyName = "NOMBRE";
+            this.nOMBREDataGridViewTextBoxColumn.HeaderText = "NOMBRE";
+            this.nOMBREDataGridViewTextBoxColumn.Name = "nOMBREDataGridViewTextBoxColumn";
+            // 
+            // eSTADODataGridViewTextBoxColumn
+            // 
+            this.eSTADODataGridViewTextBoxColumn.DataPropertyName = "ESTADO";
+            this.eSTADODataGridViewTextBoxColumn.HeaderText = "ESTADO";
+            this.eSTADODataGridViewTextBoxColumn.Name = "eSTADODataGridViewTextBoxColumn";
+            this.eSTADODataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cLIENTESBindingSource
+            // 
+            this.cLIENTESBindingSource.DataMember = "CLIENTES";
+            this.cLIENTESBindingSource.DataSource = this.taxisDataSet;
+            // 
+            // taxisDataSet
+            // 
+            this.taxisDataSet.DataSetName = "taxisDataSet";
+            this.taxisDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // grbDatosCliente
             // 
-            this.grbDatosCliente.Controls.Add(this.txtEstado);
             this.grbDatosCliente.Controls.Add(this.txtCelular);
             this.grbDatosCliente.Controls.Add(this.txtReferencia);
             this.grbDatosCliente.Controls.Add(this.txtDireccion);
             this.grbDatosCliente.Controls.Add(this.txtTelefono);
             this.grbDatosCliente.Controls.Add(this.txtNombre);
-            this.grbDatosCliente.Controls.Add(this.label6);
             this.grbDatosCliente.Controls.Add(this.label5);
             this.grbDatosCliente.Controls.Add(this.label4);
             this.grbDatosCliente.Controls.Add(this.label3);
@@ -228,87 +293,98 @@
             this.lblID.TabIndex = 0;
             this.lblID.Text = "ID";
             // 
-            // button1
+            // cLIENTESTableAdapter
             // 
-            this.button1.Image = global::TaxiRemesas.Properties.Resources.borrar;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(553, 130);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 39);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Eliminar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.cLIENTESTableAdapter.ClearBeforeFill = true;
             // 
-            // button2
+            // btnEliminar
             // 
-            this.button2.Image = global::TaxiRemesas.Properties.Resources.salir;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(421, 187);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 39);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Salir";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEliminar.Image = global::TaxiRemesas.Properties.Resources.borrar;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(553, 130);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(108, 39);
+            this.btnEliminar.TabIndex = 30;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnSalir
             // 
-            this.button3.Image = global::TaxiRemesas.Properties.Resources.guardar;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(553, 15);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 39);
-            this.button3.TabIndex = 29;
-            this.button3.Text = "Guardar";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSalir.Image = global::TaxiRemesas.Properties.Resources.salir;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.Location = new System.Drawing.Point(421, 187);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(108, 39);
+            this.btnSalir.TabIndex = 26;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
-            // button4
+            // btnGuardar
             // 
-            this.button4.Image = global::TaxiRemesas.Properties.Resources.cancel;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(553, 187);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(108, 39);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Cancelar";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnGuardar.Image = global::TaxiRemesas.Properties.Resources.guardar;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(553, 15);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(108, 39);
+            this.btnGuardar.TabIndex = 29;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // button5
+            // btnCancelar
             // 
-            this.button5.Image = global::TaxiRemesas.Properties.Resources.modificar1;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(553, 76);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(108, 39);
-            this.button5.TabIndex = 28;
-            this.button5.Text = "Modificar";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnCancelar.Image = global::TaxiRemesas.Properties.Resources.cancel;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(553, 187);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(108, 39);
+            this.btnCancelar.TabIndex = 27;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Image = global::TaxiRemesas.Properties.Resources.modificar1;
+            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificar.Location = new System.Drawing.Point(553, 76);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(108, 39);
+            this.btnModificar.TabIndex = 28;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 457);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.grbDatosCliente);
             this.Controls.Add(this.dgvTablaCliente);
             this.Name = "frmCliente";
             this.Text = "frmCliente";
+            this.Load += new System.EventHandler(this.frmCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTablaCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cLIENTESBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taxisDataSet)).EndInit();
             this.grbDatosCliente.ResumeLayout(false);
             this.grbDatosCliente.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -324,13 +400,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtReferencia;
         private System.Windows.Forms.TextBox txtCelular;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.DataGridView dgvTablaCliente;
         private System.Windows.Forms.GroupBox grbDatosCliente;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -338,10 +412,20 @@
         private System.Windows.Forms.TextBox txtBuscarCliente;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnModificar;
+        private taxisDataSet taxisDataSet;
+        private System.Windows.Forms.BindingSource cLIENTESBindingSource;
+        private taxisDataSetTableAdapters.CLIENTESTableAdapter cLIENTESTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDCLIENTEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tELEFONODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cELULARDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dIRECCIONDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rEFERENCIADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nOMBREDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eSTADODataGridViewTextBoxColumn;
     }
 }

@@ -50,9 +50,9 @@ namespace TaxiRemesas
                 {
                     MessageBox.Show("Usuario correcto", "Bienvenido Al Sistema!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
-                    /*string idCliente = controlUsuario.DevuelveIdCliente(alias, pass);
-                    MDICliente adm = new MDICliente(idCliente);
-                    adm.ShowDialog();*/
+
+                    MDIUsuario usuario = new MDIUsuario();
+                    usuario.ShowDialog();
                 }
 
             }

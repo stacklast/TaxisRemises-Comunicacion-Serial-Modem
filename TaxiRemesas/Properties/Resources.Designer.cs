@@ -63,6 +63,16 @@ namespace TaxiRemesas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _15_clientes {
+            get {
+                object obj = ResourceManager.GetObject("15-clientes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _430_ciber_seguridad_ap {
             get {
                 object obj = ResourceManager.GetObject("430-ciber-seguridad-ap", resourceCulture);
@@ -296,6 +306,16 @@ namespace TaxiRemesas.Properties {
         internal static System.Drawing.Bitmap tablet {
             get {
                 object obj = ResourceManager.GetObject("tablet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap taxi {
+            get {
+                object obj = ResourceManager.GetObject("taxi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -73,6 +73,7 @@ namespace TaxiRemesas
             comm.PortName = cmbPuerto.Text;
             comm.OpenPort();
             comm.WriteData("AT");
+           // comm.WriteData("ATZ");
             comm.WriteData("AT+VCID=1");
 
             btnConectar.Enabled = false;
@@ -118,14 +119,15 @@ namespace TaxiRemesas
         private void btnLlamar_Click_1(object sender, EventArgs e)
         {
             comm.WriteData("ATH");
-            comm.WriteData("ATD" + txtNumero.Text + ";");
+            comm.WriteData("ATDT" + txtNumero.Text + ";");
         }
 
         private void btnContestar_Click(object sender, EventArgs e)
         {
            // comm.WriteData("ATA");
             comm.WriteData("ATM2"); // para que funcionen los auriculares
-            comm.WriteData("ATH0"); // para descolgar y contestar via auriculares  
+            comm.WriteData("ATA");
+            //comm.WriteData("ATH0"); // para descolgar y contestar via auriculares  
         }
 
         private void grbAcciones_Enter(object sender, EventArgs e)
@@ -242,5 +244,7 @@ namespace TaxiRemesas
         {
             ValoresPorDefecto();
         }
+
+        
     }
 }

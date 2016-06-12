@@ -3,7 +3,7 @@ using System.Text;
 using System.Drawing;
 using System.IO.Ports;
 using System.Windows.Forms;
-using CID_Parser;
+
 //*****************************************************************************************
 //                           LICENSE INFORMATION
 //*****************************************************************************************
@@ -290,19 +290,20 @@ namespace PCComm
                 {
                     _displayCallNumber.Invoke(new EventHandler(delegate
                     {
-                        string numero = StringExtensions.Right(msg, 10);
-                        _displayCallNumber.Text = msg;
+                        string aux = msg.Substring(0, msg.Length - 3);
+                        string numero = StringExtensions.Right(aux, 10);
+                        _displayCallNumber.Text = numero;
 
                     }));
                 }
-                else
+                /*else
                 {
                     _displayCallNumber.Invoke(new EventHandler(delegate
                     {
                         _displayCallNumber.Text = "Desconocido";
 
                     }));
-                }
+                }*/
             }));
         }
         #endregion

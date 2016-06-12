@@ -24,8 +24,8 @@ namespace TaxiRemesas
         {
             this.user = user;
         }
+        #region // configuraciones formularios Hijos
         private frmConfiguraModem form = null;
-        //FORMULARIO USUARIOS
         private frmConfiguraModem FormInstance
         {
             get
@@ -56,6 +56,108 @@ namespace TaxiRemesas
         {
             // MessageBox.Show( "Formulario abierto");
         }
+
+        
+        private frmUsuario formUsr = null;
+        private frmUsuario FormInstanceUsr
+        {
+            get
+            {
+                if (formUsr == null)
+                {
+                    formUsr = new frmUsuario();
+                    formUsr.MdiParent = this;
+                    formUsr.Disposed += new EventHandler(formUsr_Disposed);
+                    formUsr.FormClosed += new FormClosedEventHandler(formUsr_FormClosed);
+                    formUsr.Load += new EventHandler(formUsr_Load);
+
+                }
+
+                return formUsr;
+            }
+        }
+
+        void formUsr_Disposed(object sender, EventArgs e)
+        {
+            formUsr = null;
+
+        }
+        void formUsr_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //MessageBox.Show("Se ha cerrado el Formulario");
+        }
+        void formUsr_Load(object sender, EventArgs e)
+        {
+            // MessageBox.Show( "Formulario abierto");
+        }
+        private frmCliente frmCli = null;
+        private frmCliente FormInstanceCli
+        {
+            get
+            {
+                if (frmCli == null)
+                {
+                    frmCli = new frmCliente();
+                    frmCli.MdiParent = this;
+                    frmCli.Disposed += new EventHandler(frmCli_Disposed);
+                    frmCli.FormClosed += new FormClosedEventHandler(frmCli_FormClosed);
+                    frmCli.Load += new EventHandler(frmCli_Load);
+
+                }
+
+                return frmCli;
+            }
+        }
+        
+        
+        void frmCli_Disposed(object sender, EventArgs e)
+        {
+            frmCli = null;
+
+        }
+        void frmCli_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //MessageBox.Show("Se ha cerrado el Formulario");
+        }
+        void frmCli_Load(object sender, EventArgs e)
+        {
+            // MessageBox.Show( "Formulario abierto");
+        }
+
+        private frmUnidad frmUni = null;
+        private frmUnidad FormInstanceUni
+        {
+            get
+            {
+                if (frmUni == null)
+                {
+                    frmUni = new frmUnidad();
+                    frmUni.MdiParent = this;
+                    frmUni.Disposed += new EventHandler(frmCli_Disposed);
+                    frmUni.FormClosed += new FormClosedEventHandler(frmCli_FormClosed);
+                    frmUni.Load += new EventHandler(frmCli_Load);
+
+                }
+
+                return frmUni;
+            }
+        }
+
+
+        void frmUni_Disposed(object sender, EventArgs e)
+        {
+            frmUni = null;
+
+        }
+        void frmUni_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //MessageBox.Show("Se ha cerrado el Formulario");
+        }
+        void frmUni_Load(object sender, EventArgs e)
+        {
+            // MessageBox.Show( "Formulario abierto");
+        }
+#endregion
         private void mostrarElementos()
         {
             string nombre_maquina = Environment.MachineName;
@@ -106,7 +208,6 @@ namespace TaxiRemesas
 
         private void MDIAdministrador_Load(object sender, EventArgs e)
         {
-            
             mostrarElementos();
         }
 
@@ -124,6 +225,40 @@ namespace TaxiRemesas
                 frm.WindowState = FormWindowState.Normal;
 
             frm.Show();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuario frmUsr = this.FormInstanceUsr;
+            // se varifica si el formulario no esta minimizado, en caso de estarlo
+            // se lo cambia a un estado normal
+            if (frmUsr.WindowState == FormWindowState.Minimized)
+                frmUsr.WindowState = FormWindowState.Normal;
+
+            frmUsr.Show();
+        }
+
+        private void unidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUnidad frmUni = this.FormInstanceUni;
+            // se varifica si el formulario no esta minimizado, en caso de estarlo
+            // se lo cambia a un estado normal
+            if (frmUni.WindowState == FormWindowState.Minimized)
+                frmUni.WindowState = FormWindowState.Normal;
+
+            frmUni.Show();
+            
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCliente frmCli = this.FormInstanceCli;
+            // se varifica si el formulario no esta minimizado, en caso de estarlo
+            // se lo cambia a un estado normal
+            if (frmCli.WindowState == FormWindowState.Minimized)
+                frmCli.WindowState = FormWindowState.Normal;
+
+            frmCli.Show();
         }
     }
 }

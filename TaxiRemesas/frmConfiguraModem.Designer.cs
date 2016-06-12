@@ -36,38 +36,38 @@
             this.cmbParidad = new System.Windows.Forms.ComboBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblAT = new System.Windows.Forms.Label();
             this.rtbRecibe = new System.Windows.Forms.RichTextBox();
             this.txtSend = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rdoText = new System.Windows.Forms.RadioButton();
             this.rdoHex = new System.Windows.Forms.RadioButton();
+            this.btnEnviar = new System.Windows.Forms.Button();
             this.cmbBitsParada = new System.Windows.Forms.ComboBox();
             this.cmbBitsDatos = new System.Windows.Forms.ComboBox();
+            this.btnDesconectar = new System.Windows.Forms.Button();
+            this.btnConectar = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.lblCallerID = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.grbAcciones = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.btnColgarLlamada = new System.Windows.Forms.Button();
+            this.btnContestar = new System.Windows.Forms.Button();
+            this.btnLlamar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgvConfiguraciones = new System.Windows.Forms.DataGridView();
-            this.lblAT = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnColgarLlamada = new System.Windows.Forms.Button();
-            this.btnContestar = new System.Windows.Forms.Button();
-            this.btnLlamar = new System.Windows.Forms.Button();
-            this.btnEnviar = new System.Windows.Forms.Button();
-            this.btnDesconectar = new System.Windows.Forms.Button();
-            this.btnConectar = new System.Windows.Forms.Button();
-            this.lblID = new System.Windows.Forms.Label();
+            this.dgvConfiguraciones = new System.Windows.Forms.DataGridView();
             this.iDCONFIGURACIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pUERTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vELOCIDADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -161,6 +161,16 @@
             this.groupBox1.Text = "Opciones";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // lblAT
+            // 
+            this.lblAT.AutoSize = true;
+            this.lblAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAT.Location = new System.Drawing.Point(18, 254);
+            this.lblAT.Name = "lblAT";
+            this.lblAT.Size = new System.Drawing.Size(99, 15);
+            this.lblAT.TabIndex = 25;
+            this.lblAT.Text = "Comandos AT:";
+            // 
             // rtbRecibe
             // 
             this.rtbRecibe.Location = new System.Drawing.Point(16, 87);
@@ -211,6 +221,20 @@
             this.rdoHex.UseVisualStyleBackColor = true;
             this.rdoHex.CheckedChanged += new System.EventHandler(this.rdoHex_CheckedChanged);
             // 
+            // btnEnviar
+            // 
+            this.btnEnviar.Image = ((System.Drawing.Image)(resources.GetObject("btnEnviar.Image")));
+            this.btnEnviar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEnviar.Location = new System.Drawing.Point(478, 233);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(98, 38);
+            this.btnEnviar.TabIndex = 16;
+            this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEnviar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
+            // 
             // cmbBitsParada
             // 
             this.cmbBitsParada.FormattingEnabled = true;
@@ -230,6 +254,84 @@
             this.cmbBitsDatos.Name = "cmbBitsDatos";
             this.cmbBitsDatos.Size = new System.Drawing.Size(76, 23);
             this.cmbBitsDatos.TabIndex = 14;
+            // 
+            // btnDesconectar
+            // 
+            this.btnDesconectar.Image = ((System.Drawing.Image)(resources.GetObject("btnDesconectar.Image")));
+            this.btnDesconectar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDesconectar.Location = new System.Drawing.Point(478, 169);
+            this.btnDesconectar.Name = "btnDesconectar";
+            this.btnDesconectar.Size = new System.Drawing.Size(101, 52);
+            this.btnDesconectar.TabIndex = 10;
+            this.btnDesconectar.Text = "Desconectar";
+            this.btnDesconectar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDesconectar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnDesconectar.UseVisualStyleBackColor = true;
+            this.btnDesconectar.Click += new System.EventHandler(this.btnDesconectar_Click);
+            // 
+            // btnConectar
+            // 
+            this.btnConectar.Image = ((System.Drawing.Image)(resources.GetObject("btnConectar.Image")));
+            this.btnConectar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnConectar.Location = new System.Drawing.Point(476, 99);
+            this.btnConectar.Name = "btnConectar";
+            this.btnConectar.Size = new System.Drawing.Size(101, 52);
+            this.btnConectar.TabIndex = 12;
+            this.btnConectar.Text = "Conectar";
+            this.btnConectar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnConectar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnConectar.UseVisualStyleBackColor = true;
+            this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(310, 28);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(87, 15);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Bits de Parada";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(411, 28);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(82, 15);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "Bits de Datos:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(212, 28);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 15);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Paridad:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(111, 28);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(106, 15);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Velocidad (bits/s) :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(18, 28);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 15);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Puerto:";
             // 
             // label4
             // 
@@ -283,55 +385,48 @@
             this.grbAcciones.Text = "Acciones";
             this.grbAcciones.Enter += new System.EventHandler(this.grbAcciones_Enter);
             // 
-            // label8
+            // btnColgarLlamada
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(18, 28);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 15);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Puerto:";
+            this.btnColgarLlamada.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnColgarLlamada.Image = ((System.Drawing.Image)(resources.GetObject("btnColgarLlamada.Image")));
+            this.btnColgarLlamada.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnColgarLlamada.Location = new System.Drawing.Point(27, 240);
+            this.btnColgarLlamada.Name = "btnColgarLlamada";
+            this.btnColgarLlamada.Size = new System.Drawing.Size(128, 41);
+            this.btnColgarLlamada.TabIndex = 15;
+            this.btnColgarLlamada.Text = "Colgar";
+            this.btnColgarLlamada.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnColgarLlamada.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnColgarLlamada.UseVisualStyleBackColor = true;
+            this.btnColgarLlamada.Click += new System.EventHandler(this.btnColgarLlamada_Click);
             // 
-            // label9
+            // btnContestar
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(111, 28);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(106, 15);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Velocidad (bits/s) :";
+            this.btnContestar.Image = ((System.Drawing.Image)(resources.GetObject("btnContestar.Image")));
+            this.btnContestar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnContestar.Location = new System.Drawing.Point(27, 193);
+            this.btnContestar.Name = "btnContestar";
+            this.btnContestar.Size = new System.Drawing.Size(128, 41);
+            this.btnContestar.TabIndex = 12;
+            this.btnContestar.Text = "Contestar";
+            this.btnContestar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnContestar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnContestar.UseVisualStyleBackColor = true;
+            this.btnContestar.Click += new System.EventHandler(this.btnContestar_Click);
             // 
-            // label10
+            // btnLlamar
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(212, 28);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 15);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Paridad:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(411, 28);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 15);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Bits de Datos:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(310, 28);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 15);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "Bits de Parada";
+            this.btnLlamar.Image = ((System.Drawing.Image)(resources.GetObject("btnLlamar.Image")));
+            this.btnLlamar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLlamar.Location = new System.Drawing.Point(27, 149);
+            this.btnLlamar.Name = "btnLlamar";
+            this.btnLlamar.Size = new System.Drawing.Size(128, 38);
+            this.btnLlamar.TabIndex = 11;
+            this.btnLlamar.Text = "Llamar";
+            this.btnLlamar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLlamar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLlamar.UseVisualStyleBackColor = true;
+            this.btnLlamar.Click += new System.EventHandler(this.btnLlamar_Click_1);
             // 
             // groupBox2
             // 
@@ -348,40 +443,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Base de Datos";
             // 
-            // dgvConfiguraciones
+            // lblID
             // 
-            this.dgvConfiguraciones.AllowUserToAddRows = false;
-            this.dgvConfiguraciones.AllowUserToDeleteRows = false;
-            this.dgvConfiguraciones.AllowUserToOrderColumns = true;
-            this.dgvConfiguraciones.AutoGenerateColumns = false;
-            this.dgvConfiguraciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConfiguraciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDCONFIGURACIONDataGridViewTextBoxColumn,
-            this.pUERTODataGridViewTextBoxColumn,
-            this.vELOCIDADDataGridViewTextBoxColumn,
-            this.pARIDADDataGridViewTextBoxColumn,
-            this.eSTADODataGridViewTextBoxColumn,
-            this.bITSDATOSDataGridViewTextBoxColumn,
-            this.bITSPARADADataGridViewTextBoxColumn});
-            this.dgvConfiguraciones.DataSource = this.cONFIGURACIONESBindingSource;
-            this.dgvConfiguraciones.Location = new System.Drawing.Point(25, 418);
-            this.dgvConfiguraciones.MultiSelect = false;
-            this.dgvConfiguraciones.Name = "dgvConfiguraciones";
-            this.dgvConfiguraciones.ReadOnly = true;
-            this.dgvConfiguraciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvConfiguraciones.Size = new System.Drawing.Size(785, 118);
-            this.dgvConfiguraciones.TabIndex = 20;
-            this.dgvConfiguraciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConfiguraciones_CellClick);
-            // 
-            // lblAT
-            // 
-            this.lblAT.AutoSize = true;
-            this.lblAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAT.Location = new System.Drawing.Point(18, 254);
-            this.lblAT.Name = "lblAT";
-            this.lblAT.Size = new System.Drawing.Size(99, 15);
-            this.lblAT.TabIndex = 25;
-            this.lblAT.Text = "Comandos AT:";
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(16, 30);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(53, 13);
+            this.lblID.TabIndex = 2;
+            this.lblID.Text = "ID_CONF";
             // 
             // btnEliminar
             // 
@@ -453,99 +522,30 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnColgarLlamada
+            // dgvConfiguraciones
             // 
-            this.btnColgarLlamada.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnColgarLlamada.Image = ((System.Drawing.Image)(resources.GetObject("btnColgarLlamada.Image")));
-            this.btnColgarLlamada.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnColgarLlamada.Location = new System.Drawing.Point(27, 240);
-            this.btnColgarLlamada.Name = "btnColgarLlamada";
-            this.btnColgarLlamada.Size = new System.Drawing.Size(128, 41);
-            this.btnColgarLlamada.TabIndex = 15;
-            this.btnColgarLlamada.Text = "Colgar";
-            this.btnColgarLlamada.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnColgarLlamada.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnColgarLlamada.UseVisualStyleBackColor = true;
-            this.btnColgarLlamada.Click += new System.EventHandler(this.btnColgarLlamada_Click);
-            // 
-            // btnContestar
-            // 
-            this.btnContestar.Image = ((System.Drawing.Image)(resources.GetObject("btnContestar.Image")));
-            this.btnContestar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnContestar.Location = new System.Drawing.Point(27, 193);
-            this.btnContestar.Name = "btnContestar";
-            this.btnContestar.Size = new System.Drawing.Size(128, 41);
-            this.btnContestar.TabIndex = 12;
-            this.btnContestar.Text = "Contestar";
-            this.btnContestar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnContestar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnContestar.UseVisualStyleBackColor = true;
-            this.btnContestar.Click += new System.EventHandler(this.btnContestar_Click);
-            // 
-            // btnLlamar
-            // 
-            this.btnLlamar.Image = ((System.Drawing.Image)(resources.GetObject("btnLlamar.Image")));
-            this.btnLlamar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLlamar.Location = new System.Drawing.Point(27, 149);
-            this.btnLlamar.Name = "btnLlamar";
-            this.btnLlamar.Size = new System.Drawing.Size(128, 38);
-            this.btnLlamar.TabIndex = 11;
-            this.btnLlamar.Text = "Llamar";
-            this.btnLlamar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLlamar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLlamar.UseVisualStyleBackColor = true;
-            this.btnLlamar.Click += new System.EventHandler(this.btnLlamar_Click_1);
-            // 
-            // btnEnviar
-            // 
-            this.btnEnviar.Image = ((System.Drawing.Image)(resources.GetObject("btnEnviar.Image")));
-            this.btnEnviar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEnviar.Location = new System.Drawing.Point(478, 233);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(98, 38);
-            this.btnEnviar.TabIndex = 16;
-            this.btnEnviar.Text = "Enviar";
-            this.btnEnviar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEnviar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnEnviar.UseVisualStyleBackColor = true;
-            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
-            // 
-            // btnDesconectar
-            // 
-            this.btnDesconectar.Image = ((System.Drawing.Image)(resources.GetObject("btnDesconectar.Image")));
-            this.btnDesconectar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDesconectar.Location = new System.Drawing.Point(478, 169);
-            this.btnDesconectar.Name = "btnDesconectar";
-            this.btnDesconectar.Size = new System.Drawing.Size(101, 52);
-            this.btnDesconectar.TabIndex = 10;
-            this.btnDesconectar.Text = "Desconectar";
-            this.btnDesconectar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnDesconectar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnDesconectar.UseVisualStyleBackColor = true;
-            this.btnDesconectar.Click += new System.EventHandler(this.btnDesconectar_Click);
-            // 
-            // btnConectar
-            // 
-            this.btnConectar.Image = ((System.Drawing.Image)(resources.GetObject("btnConectar.Image")));
-            this.btnConectar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnConectar.Location = new System.Drawing.Point(476, 99);
-            this.btnConectar.Name = "btnConectar";
-            this.btnConectar.Size = new System.Drawing.Size(101, 52);
-            this.btnConectar.TabIndex = 12;
-            this.btnConectar.Text = "Conectar";
-            this.btnConectar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnConectar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnConectar.UseVisualStyleBackColor = true;
-            this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(16, 30);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(53, 13);
-            this.lblID.TabIndex = 2;
-            this.lblID.Text = "ID_CONF";
+            this.dgvConfiguraciones.AllowUserToAddRows = false;
+            this.dgvConfiguraciones.AllowUserToDeleteRows = false;
+            this.dgvConfiguraciones.AllowUserToOrderColumns = true;
+            this.dgvConfiguraciones.AutoGenerateColumns = false;
+            this.dgvConfiguraciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConfiguraciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDCONFIGURACIONDataGridViewTextBoxColumn,
+            this.pUERTODataGridViewTextBoxColumn,
+            this.vELOCIDADDataGridViewTextBoxColumn,
+            this.pARIDADDataGridViewTextBoxColumn,
+            this.eSTADODataGridViewTextBoxColumn,
+            this.bITSDATOSDataGridViewTextBoxColumn,
+            this.bITSPARADADataGridViewTextBoxColumn});
+            this.dgvConfiguraciones.DataSource = this.cONFIGURACIONESBindingSource;
+            this.dgvConfiguraciones.Location = new System.Drawing.Point(25, 418);
+            this.dgvConfiguraciones.MultiSelect = false;
+            this.dgvConfiguraciones.Name = "dgvConfiguraciones";
+            this.dgvConfiguraciones.ReadOnly = true;
+            this.dgvConfiguraciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvConfiguraciones.Size = new System.Drawing.Size(785, 118);
+            this.dgvConfiguraciones.TabIndex = 20;
+            this.dgvConfiguraciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConfiguraciones_CellClick);
             // 
             // iDCONFIGURACIONDataGridViewTextBoxColumn
             // 

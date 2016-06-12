@@ -45,10 +45,12 @@
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.aplicaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.módemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aplicaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.grbDatosInfo.SuspendLayout();
@@ -65,7 +67,7 @@
             this.reportesToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(705, 109);
+            this.menuStrip.Size = new System.Drawing.Size(813, 109);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -76,7 +78,7 @@
             this.toolStripUser});
             this.statusStrip.Location = new System.Drawing.Point(0, 431);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(705, 22);
+            this.statusStrip.Size = new System.Drawing.Size(813, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
@@ -172,7 +174,7 @@
             this.grbDatosInfo.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.grbDatosInfo.Location = new System.Drawing.Point(467, 4);
             this.grbDatosInfo.Name = "grbDatosInfo";
-            this.grbDatosInfo.Size = new System.Drawing.Size(232, 101);
+            this.grbDatosInfo.Size = new System.Drawing.Size(303, 101);
             this.grbDatosInfo.TabIndex = 15;
             this.grbDatosInfo.TabStop = false;
             this.grbDatosInfo.Text = "Datos Informativos";
@@ -196,7 +198,7 @@
             // 
             this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.exitToolStripMenuItem.Text = "&Salir";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
             // 
@@ -204,7 +206,9 @@
             // 
             this.toolsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.módemsToolStripMenuItem,
-            this.usuariosToolStripMenuItem});
+            this.usuariosToolStripMenuItem,
+            this.unidadesToolStripMenuItem,
+            this.clientesToolStripMenuItem});
             this.toolsMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolsMenu.Image = global::TaxiRemesas.Properties.Resources.tablet;
             this.toolsMenu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -214,6 +218,38 @@
             this.toolsMenu.Text = "&Configuraciones";
             this.toolsMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolsMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            // 
+            // módemsToolStripMenuItem
+            // 
+            this.módemsToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.modem;
+            this.módemsToolStripMenuItem.Name = "módemsToolStripMenuItem";
+            this.módemsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.módemsToolStripMenuItem.Text = "Módems";
+            this.módemsToolStripMenuItem.Click += new System.EventHandler(this.módemsToolStripMenuItem_Click);
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.sesion;
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            // 
+            // unidadesToolStripMenuItem
+            // 
+            this.unidadesToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.taxi;
+            this.unidadesToolStripMenuItem.Name = "unidadesToolStripMenuItem";
+            this.unidadesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.unidadesToolStripMenuItem.Text = "Unidades";
+            this.unidadesToolStripMenuItem.Click += new System.EventHandler(this.unidadesToolStripMenuItem_Click);
+            // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources._15_clientes;
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // aplicaciónToolStripMenuItem
             // 
@@ -240,26 +276,11 @@
             this.reportesToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.reportesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             // 
-            // módemsToolStripMenuItem
-            // 
-            this.módemsToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.modem;
-            this.módemsToolStripMenuItem.Name = "módemsToolStripMenuItem";
-            this.módemsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.módemsToolStripMenuItem.Text = "Módems";
-            this.módemsToolStripMenuItem.Click += new System.EventHandler(this.módemsToolStripMenuItem_Click);
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.sesion;
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            // 
             // MDIAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 453);
+            this.ClientSize = new System.Drawing.Size(813, 453);
             this.Controls.Add(this.grbDatosInfo);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.statusStrip);
@@ -303,6 +324,8 @@
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem módemsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem unidadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
     }
 }
 
