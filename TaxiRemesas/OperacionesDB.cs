@@ -277,7 +277,7 @@ namespace TaxiRemesas
         {
             string consulta;
             conexion.Conectar();
-            consulta = "Select TOP 50 TELEFONO ,CELULAR, DIRECCION,REFERENCIA, u.ID_UNIDAD , FECHA from CLIENTES c,  UNIDADES u, ASIGNACIONES a where a.ID_CLIENTE = c.ID_CLIENTE  AND a.ID_UNIDAD = u.ID_UNIDAD ";
+            consulta = "Select ID_ASIGNACIONES AS NUM, TELEFONO ,/*CELULAR,*/ DIRECCION_ORIGEN,REFERENCIA, a.ID_UNIDAD , FECHA from CLIENTES c,  /*UNIDADES u,*/ ASIGNACIONES a where a.ID_CLIENTE = c.ID_CLIENTE  /*AND (a.ID_UNIDAD = u.ID_UNIDAD)*/  AND FECHA BETWEEN CONVERT(datetime, DATEADD(DAY, -1, GETDATE())) AND CONVERT(datetime,  GETDATE()) ";
 
             SqlCommand cmdact = conexion.ObtenerMiConexion().CreateCommand();
             cmdact.CommandType = CommandType.Text;
@@ -294,7 +294,7 @@ namespace TaxiRemesas
         {
             string consulta;
             conexion.Conectar();
-            consulta = "Select TOP 50 TELEFONO ,CELULAR, DIRECCION,REFERENCIA, u.ID_UNIDAD , " + 
+            consulta = "Select ID_ASIGNACIONES AS NUM, TELEFONO ,/*CELULAR,*/ DIRECCION,REFERENCIA, a.ID_UNIDAD AS NUM_UNIDAD , " + 
                        " FECHA from CLIENTES c,  UNIDADES u, ASIGNACIONES a " + 
                        " where a.ID_CLIENTE = c.ID_CLIENTE  AND a.ID_UNIDAD = u.ID_UNIDAD " +
                        " AND (TELEFONO = '" + valor + "' OR CELULAR = '" + valor + "' OR  DIRECCION  = '" + valor + "' OR  u.ID_UNIDAD = '" + valor + "')";
@@ -310,7 +310,27 @@ namespace TaxiRemesas
             return dt;
         }
 
-        public void Inserta_Asignaciones(int ID_UNIDAD, int ID_CLIENTE, DateTime FECHA, DateTime HORA)
+        public DataTable ActualizarGridAsignacionesBuscarID(string id_asignaciones)
+        {
+            string consulta;
+            conexion.Conectar();
+            consulta = "Select   ID_ASIGNACIONES AS NUM, c.NOMBRE, c.TELEFONO , c.CELULAR, c.DIRECCION, c.REFERENCIA, c.ID_CLIENTE, a.ID_UNIDAD AS NUM_UNIDAD , a.DIRECCION_ORIGEN, " +
+                       " FECHA from CLIENTES c,  /*UNIDADES u,*/ ASIGNACIONES a " +
+                       " where a.ID_CLIENTE = c.ID_CLIENTE  /*AND a.ID_UNIDAD = u.ID_UNIDAD*/ " +
+                       " AND ID_ASIGNACIONES = '" + id_asignaciones + "'" ;
+
+            SqlCommand cmdact = conexion.ObtenerMiConexion().CreateCommand();
+            cmdact.CommandType = CommandType.Text;
+            cmdact.CommandText = consulta;
+            cmdact.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmdact);
+            da.Fill(dt);
+            conexion.Desconectar();
+            return dt;
+        }
+
+        public void Inserta_Asignaciones(int? ID_UNIDAD, int ID_CLIENTE, DateTime FECHA, DateTime HORA, string DIRECCION_ORIGEN)
         {
             conexion.Conectar();
             SqlCommand cmdact = new SqlCommand();
@@ -318,10 +338,35 @@ namespace TaxiRemesas
             cmdact.CommandType = System.Data.CommandType.StoredProcedure;
             cmdact.Connection = conexion.ObtenerMiConexion();
 
-            cmdact.Parameters.AddWithValue("@ID_UNIDAD", ID_UNIDAD);
+            if (ID_UNIDAD == null)
+            {
+                cmdact.Parameters.Add("@ID_UNIDAD", SqlDbType.Int, 18).Value = DBNull.Value;
+            }
+            else
+            {
+                cmdact.Parameters.Add("@ID_UNIDAD", SqlDbType.Int, 18).Value = ID_UNIDAD;
+            }
+            //cmdact.Parameters.AddWithValue("@ID_UNIDAD", ID_UNIDAD);
             cmdact.Parameters.AddWithValue("@ID_CLIENTE", ID_CLIENTE);
             cmdact.Parameters.AddWithValue("@FECHA", FECHA);
             cmdact.Parameters.AddWithValue("@HORA", HORA);
+            cmdact.Parameters.AddWithValue("@DIRECCION_ORIGEN", DIRECCION_ORIGEN);
+
+            cmdact.ExecuteNonQuery();
+            conexion.Desconectar();
+        }
+
+        public void Actualiza_Asignaciones(int ID_ASIGNACIONES, int ID_UNIDAD, string DIRECCION_ORIGEN)
+        {
+            conexion.Conectar();
+            SqlCommand cmdact = new SqlCommand();
+            cmdact.CommandText = "Actualiza_Asignaciones";
+            cmdact.CommandType = System.Data.CommandType.StoredProcedure;
+            cmdact.Connection = conexion.ObtenerMiConexion();
+
+            cmdact.Parameters.AddWithValue("@ID_ASIGNACIONES", ID_ASIGNACIONES);
+            cmdact.Parameters.AddWithValue("@ID_UNIDAD", ID_UNIDAD);
+            cmdact.Parameters.AddWithValue("@DIRECCION_ORIGEN", DIRECCION_ORIGEN);
 
             cmdact.ExecuteNonQuery();
             conexion.Desconectar();

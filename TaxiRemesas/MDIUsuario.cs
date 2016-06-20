@@ -264,6 +264,42 @@ namespace TaxiRemesas
         {
             // MessageBox.Show( "Formulario abierto");
         }
+
+        private frmReportes frmReport = null;
+        private frmReportes FormInstancefrmReport
+        {
+            get
+            {
+                if (frmReport == null)
+                {
+                    frmReport = new frmReportes();
+                    frmReport.MdiParent = this;
+                    frmReport.Disposed += new EventHandler(frmReport_Disposed);
+                    frmReport.FormClosed += new FormClosedEventHandler(frmReport_FormClosed);
+                    frmReport.Load += new EventHandler(frmReport_Load);
+
+                }
+
+                return frmReport;
+            }
+        }
+
+
+        void frmReport_Disposed(object sender, EventArgs e)
+        {
+            frmReport = null;
+
+        }
+        void frmReport_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //MessageBox.Show("Se ha cerrado el Formulario");
+        }
+        void frmReport_Load(object sender, EventArgs e)
+        {
+            // MessageBox.Show( "Formulario abierto");
+        }
+
+
         #endregion
         private void mostrarElementos()
         {
@@ -325,6 +361,19 @@ namespace TaxiRemesas
                 frmApli.WindowState = FormWindowState.Normal;
 
             frmApli.Show();
+        }
+
+        private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReportes frmReport = this.FormInstancefrmReport;
+            // se varifica si el formulario no esta minimizado, en caso de estarlo
+            // se lo cambia a un estado normal
+            if (frmReport.WindowState == FormWindowState.Minimized)
+                frmReport.WindowState = FormWindowState.Normal;
+
+            frmReport.Show();
+
+           
         }
     }
 }

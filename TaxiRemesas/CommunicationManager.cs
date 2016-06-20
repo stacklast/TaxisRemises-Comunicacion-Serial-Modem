@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace TaxiRemesas
 {
-        public class CommunicationManager
+   public class CommunicationManager 
     {
         #region Manager Enums
         /// <summary>

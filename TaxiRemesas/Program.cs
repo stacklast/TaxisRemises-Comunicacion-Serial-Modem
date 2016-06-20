@@ -14,7 +14,7 @@ namespace TaxiRemesas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRegistrosLlamadas());
+            Application.Run(new Autenticacion());
         }
     }
 }

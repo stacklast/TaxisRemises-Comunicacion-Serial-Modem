@@ -31,15 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDIAdministrador));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.módemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.unidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aplicaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripUser = new System.Windows.Forms.ToolStripStatusLabel();
@@ -52,6 +43,16 @@
             this.lblHoraActual = new System.Windows.Forms.Label();
             this.grbDatosInfo = new System.Windows.Forms.GroupBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.módemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aplicaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemReporteFecha = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.grbDatosInfo.SuspendLayout();
@@ -71,104 +72,6 @@
             this.menuStrip.Size = new System.Drawing.Size(912, 109);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
-            // 
-            // fileMenu
-            // 
-            this.fileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
-            this.fileMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fileMenu.Image = global::TaxiRemesas.Properties.Resources.monitor64x64;
-            this.fileMenu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.fileMenu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.fileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
-            this.fileMenu.Name = "fileMenu";
-            this.fileMenu.Size = new System.Drawing.Size(76, 105);
-            this.fileMenu.Text = "&Sistema";
-            this.fileMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.fileMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
-            this.exitToolStripMenuItem.Text = "&Salir";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
-            // 
-            // toolsMenu
-            // 
-            this.toolsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.módemsToolStripMenuItem,
-            this.usuariosToolStripMenuItem,
-            this.unidadesToolStripMenuItem,
-            this.clientesToolStripMenuItem});
-            this.toolsMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolsMenu.Image = global::TaxiRemesas.Properties.Resources.tablet;
-            this.toolsMenu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.toolsMenu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolsMenu.Name = "toolsMenu";
-            this.toolsMenu.Size = new System.Drawing.Size(128, 105);
-            this.toolsMenu.Text = "&Configuraciones";
-            this.toolsMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolsMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            // 
-            // módemsToolStripMenuItem
-            // 
-            this.módemsToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.modem;
-            this.módemsToolStripMenuItem.Name = "módemsToolStripMenuItem";
-            this.módemsToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.módemsToolStripMenuItem.Text = "Módems";
-            this.módemsToolStripMenuItem.Click += new System.EventHandler(this.módemsToolStripMenuItem_Click);
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.sesion;
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
-            // 
-            // unidadesToolStripMenuItem
-            // 
-            this.unidadesToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.taxi;
-            this.unidadesToolStripMenuItem.Name = "unidadesToolStripMenuItem";
-            this.unidadesToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.unidadesToolStripMenuItem.Text = "Unidades";
-            this.unidadesToolStripMenuItem.Click += new System.EventHandler(this.unidadesToolStripMenuItem_Click);
-            // 
-            // clientesToolStripMenuItem
-            // 
-            this.clientesToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources._15_clientes;
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.clientesToolStripMenuItem.Text = "Clientes";
-            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
-            // 
-            // aplicaciónToolStripMenuItem
-            // 
-            this.aplicaciónToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aplicaciónToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.centro_llamadas;
-            this.aplicaciónToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.aplicaciónToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.aplicaciónToolStripMenuItem.Name = "aplicaciónToolStripMenuItem";
-            this.aplicaciónToolStripMenuItem.Size = new System.Drawing.Size(87, 105);
-            this.aplicaciónToolStripMenuItem.Text = "Aplicación";
-            this.aplicaciónToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.aplicaciónToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
-            this.aplicaciónToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.aplicaciónToolStripMenuItem.Click += new System.EventHandler(this.aplicaciónToolStripMenuItem_Click);
-            // 
-            // reportesToolStripMenuItem
-            // 
-            this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportesToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.reportes;
-            this.reportesToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.reportesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(92, 105);
-            this.reportesToolStripMenuItem.Text = "Reportes";
-            this.reportesToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.reportesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             // 
             // statusStrip
             // 
@@ -283,6 +186,114 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // fileMenu
+            // 
+            this.fileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.fileMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileMenu.Image = global::TaxiRemesas.Properties.Resources.monitor64x64;
+            this.fileMenu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.fileMenu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.fileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
+            this.fileMenu.Name = "fileMenu";
+            this.fileMenu.Size = new System.Drawing.Size(76, 105);
+            this.fileMenu.Text = "&Sistema";
+            this.fileMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.fileMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.exitToolStripMenuItem.Text = "&Salir";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
+            // 
+            // toolsMenu
+            // 
+            this.toolsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.módemsToolStripMenuItem,
+            this.usuariosToolStripMenuItem,
+            this.unidadesToolStripMenuItem,
+            this.clientesToolStripMenuItem});
+            this.toolsMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolsMenu.Image = global::TaxiRemesas.Properties.Resources.tablet;
+            this.toolsMenu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.toolsMenu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolsMenu.Name = "toolsMenu";
+            this.toolsMenu.Size = new System.Drawing.Size(128, 105);
+            this.toolsMenu.Text = "&Configuraciones";
+            this.toolsMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolsMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            // 
+            // módemsToolStripMenuItem
+            // 
+            this.módemsToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.modem;
+            this.módemsToolStripMenuItem.Name = "módemsToolStripMenuItem";
+            this.módemsToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.módemsToolStripMenuItem.Text = "Módems";
+            this.módemsToolStripMenuItem.Click += new System.EventHandler(this.módemsToolStripMenuItem_Click);
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.sesion;
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            // 
+            // unidadesToolStripMenuItem
+            // 
+            this.unidadesToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.taxi;
+            this.unidadesToolStripMenuItem.Name = "unidadesToolStripMenuItem";
+            this.unidadesToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.unidadesToolStripMenuItem.Text = "Unidades";
+            this.unidadesToolStripMenuItem.Click += new System.EventHandler(this.unidadesToolStripMenuItem_Click);
+            // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources._15_clientes;
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
+            // 
+            // aplicaciónToolStripMenuItem
+            // 
+            this.aplicaciónToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aplicaciónToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.centro_llamadas;
+            this.aplicaciónToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.aplicaciónToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.aplicaciónToolStripMenuItem.Name = "aplicaciónToolStripMenuItem";
+            this.aplicaciónToolStripMenuItem.Size = new System.Drawing.Size(87, 105);
+            this.aplicaciónToolStripMenuItem.Text = "Aplicación";
+            this.aplicaciónToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.aplicaciónToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.aplicaciónToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.aplicaciónToolStripMenuItem.Click += new System.EventHandler(this.aplicaciónToolStripMenuItem_Click);
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemReporteFecha});
+            this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportesToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.reportes;
+            this.reportesToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.reportesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(92, 105);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            this.reportesToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.reportesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            // 
+            // toolStripMenuItemReporteFecha
+            // 
+            this.toolStripMenuItemReporteFecha.Image = global::TaxiRemesas.Properties.Resources.calender_32;
+            this.toolStripMenuItemReporteFecha.Name = "toolStripMenuItemReporteFecha";
+            this.toolStripMenuItemReporteFecha.Size = new System.Drawing.Size(217, 22);
+            this.toolStripMenuItemReporteFecha.Text = "Reporte de Llamadas";
+            this.toolStripMenuItemReporteFecha.Click += new System.EventHandler(this.toolStripMenuItemReporteFecha_Click);
+            // 
             // MDIAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,6 +345,7 @@
         private System.Windows.Forms.ToolStripMenuItem unidadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemReporteFecha;
     }
 }
 

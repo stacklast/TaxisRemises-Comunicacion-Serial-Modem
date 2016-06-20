@@ -36,7 +36,7 @@ namespace TaxiRemesas {
         
         private USUARIOSDataTable tableUSUARIOS;
         
-        private Reporte_AsignacionesDataTable tableReporte_Asignaciones;
+        private Reporte_LlamadasDataTable tableReporte_Llamadas;
         
         private global::System.Data.DataRelation relationFK_ASIGNACI_RELATIONS_CLIENTES;
         
@@ -88,8 +88,8 @@ namespace TaxiRemesas {
                 if ((ds.Tables["USUARIOS"] != null)) {
                     base.Tables.Add(new USUARIOSDataTable(ds.Tables["USUARIOS"]));
                 }
-                if ((ds.Tables["Reporte_Asignaciones"] != null)) {
-                    base.Tables.Add(new Reporte_AsignacionesDataTable(ds.Tables["Reporte_Asignaciones"]));
+                if ((ds.Tables["Reporte_Llamadas"] != null)) {
+                    base.Tables.Add(new Reporte_LlamadasDataTable(ds.Tables["Reporte_Llamadas"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -173,9 +173,9 @@ namespace TaxiRemesas {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Reporte_AsignacionesDataTable Reporte_Asignaciones {
+        public Reporte_LlamadasDataTable Reporte_Llamadas {
             get {
-                return this.tableReporte_Asignaciones;
+                return this.tableReporte_Llamadas;
             }
         }
         
@@ -264,8 +264,8 @@ namespace TaxiRemesas {
                 if ((ds.Tables["USUARIOS"] != null)) {
                     base.Tables.Add(new USUARIOSDataTable(ds.Tables["USUARIOS"]));
                 }
-                if ((ds.Tables["Reporte_Asignaciones"] != null)) {
-                    base.Tables.Add(new Reporte_AsignacionesDataTable(ds.Tables["Reporte_Asignaciones"]));
+                if ((ds.Tables["Reporte_Llamadas"] != null)) {
+                    base.Tables.Add(new Reporte_LlamadasDataTable(ds.Tables["Reporte_Llamadas"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -336,10 +336,10 @@ namespace TaxiRemesas {
                     this.tableUSUARIOS.InitVars();
                 }
             }
-            this.tableReporte_Asignaciones = ((Reporte_AsignacionesDataTable)(base.Tables["Reporte_Asignaciones"]));
+            this.tableReporte_Llamadas = ((Reporte_LlamadasDataTable)(base.Tables["Reporte_Llamadas"]));
             if ((initTable == true)) {
-                if ((this.tableReporte_Asignaciones != null)) {
-                    this.tableReporte_Asignaciones.InitVars();
+                if ((this.tableReporte_Llamadas != null)) {
+                    this.tableReporte_Llamadas.InitVars();
                 }
             }
             this.relationFK_ASIGNACI_RELATIONS_CLIENTES = this.Relations["FK_ASIGNACI_RELATIONS_CLIENTES"];
@@ -366,8 +366,8 @@ namespace TaxiRemesas {
             base.Tables.Add(this.tableUNIDADES);
             this.tableUSUARIOS = new USUARIOSDataTable();
             base.Tables.Add(this.tableUSUARIOS);
-            this.tableReporte_Asignaciones = new Reporte_AsignacionesDataTable();
-            base.Tables.Add(this.tableReporte_Asignaciones);
+            this.tableReporte_Llamadas = new Reporte_LlamadasDataTable();
+            base.Tables.Add(this.tableReporte_Llamadas);
             this.relationFK_ASIGNACI_RELATIONS_CLIENTES = new global::System.Data.DataRelation("FK_ASIGNACI_RELATIONS_CLIENTES", new global::System.Data.DataColumn[] {
                         this.tableCLIENTES.ID_CLIENTEColumn}, new global::System.Data.DataColumn[] {
                         this.tableASIGNACIONES.ID_CLIENTEColumn}, false);
@@ -416,7 +416,7 @@ namespace TaxiRemesas {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeReporte_Asignaciones() {
+        private bool ShouldSerializeReporte_Llamadas() {
             return false;
         }
         
@@ -494,7 +494,7 @@ namespace TaxiRemesas {
         public delegate void USUARIOSRowChangeEventHandler(object sender, USUARIOSRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void Reporte_AsignacionesRowChangeEventHandler(object sender, Reporte_AsignacionesRowChangeEvent e);
+        public delegate void Reporte_LlamadasRowChangeEventHandler(object sender, Reporte_LlamadasRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2598,13 +2598,15 @@ namespace TaxiRemesas {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Reporte_AsignacionesDataTable : global::System.Data.TypedTableBase<Reporte_AsignacionesRow> {
+        public partial class Reporte_LlamadasDataTable : global::System.Data.TypedTableBase<Reporte_LlamadasRow> {
+            
+            private global::System.Data.DataColumn columnNUM;
             
             private global::System.Data.DataColumn columnTELEFONO;
             
             private global::System.Data.DataColumn columnCELULAR;
             
-            private global::System.Data.DataColumn columnDIRECCION;
+            private global::System.Data.DataColumn columnDIRECCION_ORIGEN;
             
             private global::System.Data.DataColumn columnREFERENCIA;
             
@@ -2614,8 +2616,8 @@ namespace TaxiRemesas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Reporte_AsignacionesDataTable() {
-                this.TableName = "Reporte_Asignaciones";
+            public Reporte_LlamadasDataTable() {
+                this.TableName = "Reporte_Llamadas";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2623,7 +2625,7 @@ namespace TaxiRemesas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Reporte_AsignacionesDataTable(global::System.Data.DataTable table) {
+            internal Reporte_LlamadasDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2640,9 +2642,17 @@ namespace TaxiRemesas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected Reporte_AsignacionesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Reporte_LlamadasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NUMColumn {
+                get {
+                    return this.columnNUM;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2663,9 +2673,9 @@ namespace TaxiRemesas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DIRECCIONColumn {
+            public global::System.Data.DataColumn DIRECCION_ORIGENColumn {
                 get {
-                    return this.columnDIRECCION;
+                    return this.columnDIRECCION_ORIGEN;
                 }
             }
             
@@ -2704,57 +2714,51 @@ namespace TaxiRemesas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Reporte_AsignacionesRow this[int index] {
+            public Reporte_LlamadasRow this[int index] {
                 get {
-                    return ((Reporte_AsignacionesRow)(this.Rows[index]));
+                    return ((Reporte_LlamadasRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Reporte_AsignacionesRowChangeEventHandler Reporte_AsignacionesRowChanging;
+            public event Reporte_LlamadasRowChangeEventHandler Reporte_LlamadasRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Reporte_AsignacionesRowChangeEventHandler Reporte_AsignacionesRowChanged;
+            public event Reporte_LlamadasRowChangeEventHandler Reporte_LlamadasRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Reporte_AsignacionesRowChangeEventHandler Reporte_AsignacionesRowDeleting;
+            public event Reporte_LlamadasRowChangeEventHandler Reporte_LlamadasRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Reporte_AsignacionesRowChangeEventHandler Reporte_AsignacionesRowDeleted;
+            public event Reporte_LlamadasRowChangeEventHandler Reporte_LlamadasRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddReporte_AsignacionesRow(Reporte_AsignacionesRow row) {
+            public void AddReporte_LlamadasRow(Reporte_LlamadasRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Reporte_AsignacionesRow AddReporte_AsignacionesRow(string TELEFONO, string CELULAR, string DIRECCION, string REFERENCIA, System.DateTime FECHA) {
-                Reporte_AsignacionesRow rowReporte_AsignacionesRow = ((Reporte_AsignacionesRow)(this.NewRow()));
+            public Reporte_LlamadasRow AddReporte_LlamadasRow(string TELEFONO, string CELULAR, string DIRECCION_ORIGEN, string REFERENCIA, System.DateTime FECHA) {
+                Reporte_LlamadasRow rowReporte_LlamadasRow = ((Reporte_LlamadasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        null,
                         TELEFONO,
                         CELULAR,
-                        DIRECCION,
+                        DIRECCION_ORIGEN,
                         REFERENCIA,
                         null,
                         FECHA};
-                rowReporte_AsignacionesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowReporte_AsignacionesRow);
-                return rowReporte_AsignacionesRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Reporte_AsignacionesRow FindByID_UNIDAD(decimal ID_UNIDAD) {
-                return ((Reporte_AsignacionesRow)(this.Rows.Find(new object[] {
-                            ID_UNIDAD})));
+                rowReporte_LlamadasRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowReporte_LlamadasRow);
+                return rowReporte_LlamadasRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Reporte_AsignacionesDataTable cln = ((Reporte_AsignacionesDataTable)(base.Clone()));
+                Reporte_LlamadasDataTable cln = ((Reporte_LlamadasDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2762,15 +2766,16 @@ namespace TaxiRemesas {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Reporte_AsignacionesDataTable();
+                return new Reporte_LlamadasDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
+                this.columnNUM = base.Columns["NUM"];
                 this.columnTELEFONO = base.Columns["TELEFONO"];
                 this.columnCELULAR = base.Columns["CELULAR"];
-                this.columnDIRECCION = base.Columns["DIRECCION"];
+                this.columnDIRECCION_ORIGEN = base.Columns["DIRECCION_ORIGEN"];
                 this.columnREFERENCIA = base.Columns["REFERENCIA"];
                 this.columnID_UNIDAD = base.Columns["ID_UNIDAD"];
                 this.columnFECHA = base.Columns["FECHA"];
@@ -2779,54 +2784,56 @@ namespace TaxiRemesas {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
+                this.columnNUM = new global::System.Data.DataColumn("NUM", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNUM);
                 this.columnTELEFONO = new global::System.Data.DataColumn("TELEFONO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTELEFONO);
                 this.columnCELULAR = new global::System.Data.DataColumn("CELULAR", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCELULAR);
-                this.columnDIRECCION = new global::System.Data.DataColumn("DIRECCION", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDIRECCION);
+                this.columnDIRECCION_ORIGEN = new global::System.Data.DataColumn("DIRECCION_ORIGEN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDIRECCION_ORIGEN);
                 this.columnREFERENCIA = new global::System.Data.DataColumn("REFERENCIA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnREFERENCIA);
                 this.columnID_UNIDAD = new global::System.Data.DataColumn("ID_UNIDAD", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_UNIDAD);
                 this.columnFECHA = new global::System.Data.DataColumn("FECHA", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFECHA);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID_UNIDAD}, true));
+                this.columnNUM.AutoIncrement = true;
+                this.columnNUM.AllowDBNull = false;
+                this.columnNUM.ReadOnly = true;
                 this.columnTELEFONO.MaxLength = 15;
                 this.columnCELULAR.MaxLength = 15;
-                this.columnDIRECCION.MaxLength = 250;
+                this.columnDIRECCION_ORIGEN.MaxLength = 500;
                 this.columnREFERENCIA.MaxLength = 250;
                 this.columnID_UNIDAD.AutoIncrement = true;
                 this.columnID_UNIDAD.AllowDBNull = false;
                 this.columnID_UNIDAD.ReadOnly = true;
-                this.columnID_UNIDAD.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Reporte_AsignacionesRow NewReporte_AsignacionesRow() {
-                return ((Reporte_AsignacionesRow)(this.NewRow()));
+            public Reporte_LlamadasRow NewReporte_LlamadasRow() {
+                return ((Reporte_LlamadasRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Reporte_AsignacionesRow(builder);
+                return new Reporte_LlamadasRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Reporte_AsignacionesRow);
+                return typeof(Reporte_LlamadasRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Reporte_AsignacionesRowChanged != null)) {
-                    this.Reporte_AsignacionesRowChanged(this, new Reporte_AsignacionesRowChangeEvent(((Reporte_AsignacionesRow)(e.Row)), e.Action));
+                if ((this.Reporte_LlamadasRowChanged != null)) {
+                    this.Reporte_LlamadasRowChanged(this, new Reporte_LlamadasRowChangeEvent(((Reporte_LlamadasRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2834,8 +2841,8 @@ namespace TaxiRemesas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Reporte_AsignacionesRowChanging != null)) {
-                    this.Reporte_AsignacionesRowChanging(this, new Reporte_AsignacionesRowChangeEvent(((Reporte_AsignacionesRow)(e.Row)), e.Action));
+                if ((this.Reporte_LlamadasRowChanging != null)) {
+                    this.Reporte_LlamadasRowChanging(this, new Reporte_LlamadasRowChangeEvent(((Reporte_LlamadasRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2843,8 +2850,8 @@ namespace TaxiRemesas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Reporte_AsignacionesRowDeleted != null)) {
-                    this.Reporte_AsignacionesRowDeleted(this, new Reporte_AsignacionesRowChangeEvent(((Reporte_AsignacionesRow)(e.Row)), e.Action));
+                if ((this.Reporte_LlamadasRowDeleted != null)) {
+                    this.Reporte_LlamadasRowDeleted(this, new Reporte_LlamadasRowChangeEvent(((Reporte_LlamadasRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2852,14 +2859,14 @@ namespace TaxiRemesas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Reporte_AsignacionesRowDeleting != null)) {
-                    this.Reporte_AsignacionesRowDeleting(this, new Reporte_AsignacionesRowChangeEvent(((Reporte_AsignacionesRow)(e.Row)), e.Action));
+                if ((this.Reporte_LlamadasRowDeleting != null)) {
+                    this.Reporte_LlamadasRowDeleting(this, new Reporte_LlamadasRowChangeEvent(((Reporte_LlamadasRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveReporte_AsignacionesRow(Reporte_AsignacionesRow row) {
+            public void RemoveReporte_LlamadasRow(Reporte_LlamadasRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2886,7 +2893,7 @@ namespace TaxiRemesas {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Reporte_AsignacionesDataTable";
+                attribute2.FixedValue = "Reporte_LlamadasDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -4110,15 +4117,26 @@ namespace TaxiRemesas {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Reporte_AsignacionesRow : global::System.Data.DataRow {
+        public partial class Reporte_LlamadasRow : global::System.Data.DataRow {
             
-            private Reporte_AsignacionesDataTable tableReporte_Asignaciones;
+            private Reporte_LlamadasDataTable tableReporte_Llamadas;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Reporte_AsignacionesRow(global::System.Data.DataRowBuilder rb) : 
+            internal Reporte_LlamadasRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableReporte_Asignaciones = ((Reporte_AsignacionesDataTable)(this.Table));
+                this.tableReporte_Llamadas = ((Reporte_LlamadasDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal NUM {
+                get {
+                    return ((decimal)(this[this.tableReporte_Llamadas.NUMColumn]));
+                }
+                set {
+                    this[this.tableReporte_Llamadas.NUMColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4126,14 +4144,14 @@ namespace TaxiRemesas {
             public string TELEFONO {
                 get {
                     try {
-                        return ((string)(this[this.tableReporte_Asignaciones.TELEFONOColumn]));
+                        return ((string)(this[this.tableReporte_Llamadas.TELEFONOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TELEFONO\' in table \'Reporte_Asignaciones\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TELEFONO\' in table \'Reporte_Llamadas\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableReporte_Asignaciones.TELEFONOColumn] = value;
+                    this[this.tableReporte_Llamadas.TELEFONOColumn] = value;
                 }
             }
             
@@ -4142,30 +4160,30 @@ namespace TaxiRemesas {
             public string CELULAR {
                 get {
                     try {
-                        return ((string)(this[this.tableReporte_Asignaciones.CELULARColumn]));
+                        return ((string)(this[this.tableReporte_Llamadas.CELULARColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CELULAR\' in table \'Reporte_Asignaciones\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CELULAR\' in table \'Reporte_Llamadas\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableReporte_Asignaciones.CELULARColumn] = value;
+                    this[this.tableReporte_Llamadas.CELULARColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string DIRECCION {
+            public string DIRECCION_ORIGEN {
                 get {
                     try {
-                        return ((string)(this[this.tableReporte_Asignaciones.DIRECCIONColumn]));
+                        return ((string)(this[this.tableReporte_Llamadas.DIRECCION_ORIGENColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DIRECCION\' in table \'Reporte_Asignaciones\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DIRECCION_ORIGEN\' in table \'Reporte_Llamadas\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableReporte_Asignaciones.DIRECCIONColumn] = value;
+                    this[this.tableReporte_Llamadas.DIRECCION_ORIGENColumn] = value;
                 }
             }
             
@@ -4174,14 +4192,14 @@ namespace TaxiRemesas {
             public string REFERENCIA {
                 get {
                     try {
-                        return ((string)(this[this.tableReporte_Asignaciones.REFERENCIAColumn]));
+                        return ((string)(this[this.tableReporte_Llamadas.REFERENCIAColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'REFERENCIA\' in table \'Reporte_Asignaciones\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'REFERENCIA\' in table \'Reporte_Llamadas\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableReporte_Asignaciones.REFERENCIAColumn] = value;
+                    this[this.tableReporte_Llamadas.REFERENCIAColumn] = value;
                 }
             }
             
@@ -4189,10 +4207,10 @@ namespace TaxiRemesas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public decimal ID_UNIDAD {
                 get {
-                    return ((decimal)(this[this.tableReporte_Asignaciones.ID_UNIDADColumn]));
+                    return ((decimal)(this[this.tableReporte_Llamadas.ID_UNIDADColumn]));
                 }
                 set {
-                    this[this.tableReporte_Asignaciones.ID_UNIDADColumn] = value;
+                    this[this.tableReporte_Llamadas.ID_UNIDADColumn] = value;
                 }
             }
             
@@ -4201,75 +4219,75 @@ namespace TaxiRemesas {
             public System.DateTime FECHA {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableReporte_Asignaciones.FECHAColumn]));
+                        return ((global::System.DateTime)(this[this.tableReporte_Llamadas.FECHAColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FECHA\' in table \'Reporte_Asignaciones\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'FECHA\' in table \'Reporte_Llamadas\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableReporte_Asignaciones.FECHAColumn] = value;
+                    this[this.tableReporte_Llamadas.FECHAColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTELEFONONull() {
-                return this.IsNull(this.tableReporte_Asignaciones.TELEFONOColumn);
+                return this.IsNull(this.tableReporte_Llamadas.TELEFONOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTELEFONONull() {
-                this[this.tableReporte_Asignaciones.TELEFONOColumn] = global::System.Convert.DBNull;
+                this[this.tableReporte_Llamadas.TELEFONOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCELULARNull() {
-                return this.IsNull(this.tableReporte_Asignaciones.CELULARColumn);
+                return this.IsNull(this.tableReporte_Llamadas.CELULARColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCELULARNull() {
-                this[this.tableReporte_Asignaciones.CELULARColumn] = global::System.Convert.DBNull;
+                this[this.tableReporte_Llamadas.CELULARColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDIRECCIONNull() {
-                return this.IsNull(this.tableReporte_Asignaciones.DIRECCIONColumn);
+            public bool IsDIRECCION_ORIGENNull() {
+                return this.IsNull(this.tableReporte_Llamadas.DIRECCION_ORIGENColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDIRECCIONNull() {
-                this[this.tableReporte_Asignaciones.DIRECCIONColumn] = global::System.Convert.DBNull;
+            public void SetDIRECCION_ORIGENNull() {
+                this[this.tableReporte_Llamadas.DIRECCION_ORIGENColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsREFERENCIANull() {
-                return this.IsNull(this.tableReporte_Asignaciones.REFERENCIAColumn);
+                return this.IsNull(this.tableReporte_Llamadas.REFERENCIAColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetREFERENCIANull() {
-                this[this.tableReporte_Asignaciones.REFERENCIAColumn] = global::System.Convert.DBNull;
+                this[this.tableReporte_Llamadas.REFERENCIAColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsFECHANull() {
-                return this.IsNull(this.tableReporte_Asignaciones.FECHAColumn);
+                return this.IsNull(this.tableReporte_Llamadas.FECHAColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetFECHANull() {
-                this[this.tableReporte_Asignaciones.FECHAColumn] = global::System.Convert.DBNull;
+                this[this.tableReporte_Llamadas.FECHAColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4481,22 +4499,22 @@ namespace TaxiRemesas {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class Reporte_AsignacionesRowChangeEvent : global::System.EventArgs {
+        public class Reporte_LlamadasRowChangeEvent : global::System.EventArgs {
             
-            private Reporte_AsignacionesRow eventRow;
+            private Reporte_LlamadasRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Reporte_AsignacionesRowChangeEvent(Reporte_AsignacionesRow row, global::System.Data.DataRowAction action) {
+            public Reporte_LlamadasRowChangeEvent(Reporte_LlamadasRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Reporte_AsignacionesRow Row {
+            public Reporte_LlamadasRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -7530,7 +7548,7 @@ SELECT ID_USUARIO, ROL, PASS, [USER], ESTADO FROM USUARIOS WHERE (ID_USUARIO = @
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Reporte_AsignacionesTableAdapter : global::System.ComponentModel.Component {
+    public partial class Reporte_LlamadasTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -7544,7 +7562,7 @@ SELECT ID_USUARIO, ROL, PASS, [USER], ESTADO FROM USUARIOS WHERE (ID_USUARIO = @
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public Reporte_AsignacionesTableAdapter() {
+        public Reporte_LlamadasTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -7641,10 +7659,11 @@ SELECT ID_USUARIO, ROL, PASS, [USER], ESTADO FROM USUARIOS WHERE (ID_USUARIO = @
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Reporte_Asignaciones";
+            tableMapping.DataSetTable = "Reporte_Llamadas";
+            tableMapping.ColumnMappings.Add("NUM", "NUM");
             tableMapping.ColumnMappings.Add("TELEFONO", "TELEFONO");
             tableMapping.ColumnMappings.Add("CELULAR", "CELULAR");
-            tableMapping.ColumnMappings.Add("DIRECCION", "DIRECCION");
+            tableMapping.ColumnMappings.Add("DIRECCION_ORIGEN", "DIRECCION_ORIGEN");
             tableMapping.ColumnMappings.Add("REFERENCIA", "REFERENCIA");
             tableMapping.ColumnMappings.Add("ID_UNIDAD", "ID_UNIDAD");
             tableMapping.ColumnMappings.Add("FECHA", "FECHA");
@@ -7664,27 +7683,27 @@ SELECT ID_USUARIO, ROL, PASS, [USER], ESTADO FROM USUARIOS WHERE (ID_USUARIO = @
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.Reporte_Asignaciones";
+            this._commandCollection[0].CommandText = "dbo.Reporte_Llamadas";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_final", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha2", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(taxisDataSet.Reporte_AsignacionesDataTable dataTable, global::System.Nullable<global::System.DateTime> fecha, global::System.Nullable<global::System.DateTime> fecha_final) {
+        public virtual int Fill(taxisDataSet.Reporte_LlamadasDataTable dataTable, global::System.Nullable<global::System.DateTime> Fecha, global::System.Nullable<global::System.DateTime> fecha2) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((fecha.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fecha.Value));
+            if ((Fecha.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(Fecha.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((fecha_final.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(fecha_final.Value));
+            if ((fecha2.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(fecha2.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -7700,21 +7719,21 @@ SELECT ID_USUARIO, ROL, PASS, [USER], ESTADO FROM USUARIOS WHERE (ID_USUARIO = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual taxisDataSet.Reporte_AsignacionesDataTable GetData(global::System.Nullable<global::System.DateTime> fecha, global::System.Nullable<global::System.DateTime> fecha_final) {
+        public virtual taxisDataSet.Reporte_LlamadasDataTable GetData(global::System.Nullable<global::System.DateTime> Fecha, global::System.Nullable<global::System.DateTime> fecha2) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((fecha.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fecha.Value));
+            if ((Fecha.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(Fecha.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((fecha_final.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(fecha_final.Value));
+            if ((fecha2.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(fecha2.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            taxisDataSet.Reporte_AsignacionesDataTable dataTable = new taxisDataSet.Reporte_AsignacionesDataTable();
+            taxisDataSet.Reporte_LlamadasDataTable dataTable = new taxisDataSet.Reporte_LlamadasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
