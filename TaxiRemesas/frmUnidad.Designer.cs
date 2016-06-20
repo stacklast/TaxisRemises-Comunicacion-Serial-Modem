@@ -252,14 +252,14 @@
             // 
             this.txtPropietario.Location = new System.Drawing.Point(86, 26);
             this.txtPropietario.Name = "txtPropietario";
-            this.txtPropietario.Size = new System.Drawing.Size(100, 20);
+            this.txtPropietario.Size = new System.Drawing.Size(162, 20);
             this.txtPropietario.TabIndex = 11;
             // 
             // txtChofer
             // 
             this.txtChofer.Location = new System.Drawing.Point(86, 55);
             this.txtChofer.Name = "txtChofer";
-            this.txtChofer.Size = new System.Drawing.Size(100, 20);
+            this.txtChofer.Size = new System.Drawing.Size(162, 20);
             this.txtChofer.TabIndex = 12;
             // 
             // txtNumero_Unidad
@@ -273,7 +273,7 @@
             // 
             this.txtAutorizacion.Location = new System.Drawing.Point(86, 90);
             this.txtAutorizacion.Name = "txtAutorizacion";
-            this.txtAutorizacion.Size = new System.Drawing.Size(100, 20);
+            this.txtAutorizacion.Size = new System.Drawing.Size(162, 20);
             this.txtAutorizacion.TabIndex = 14;
             // 
             // txtPlaca
@@ -299,19 +299,19 @@
             // 
             // txtBuscarUnidad
             // 
-            this.txtBuscarUnidad.Location = new System.Drawing.Point(187, 26);
+            this.txtBuscarUnidad.Location = new System.Drawing.Point(165, 26);
             this.txtBuscarUnidad.Name = "txtBuscarUnidad";
-            this.txtBuscarUnidad.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscarUnidad.Size = new System.Drawing.Size(122, 20);
             this.txtBuscarUnidad.TabIndex = 20;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(98, 26);
+            this.label10.Location = new System.Drawing.Point(77, 30);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 13);
+            this.label10.Size = new System.Drawing.Size(82, 13);
             this.label10.TabIndex = 19;
-            this.label10.Text = "Buscar Unidad:";
+            this.label10.Text = "Buscar Usuario:";
             // 
             // grbDatosUnidad
             // 
@@ -360,6 +360,7 @@
             this.btnBuscarUnidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscarUnidad.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnBuscarUnidad.UseVisualStyleBackColor = true;
+            this.btnBuscarUnidad.Click += new System.EventHandler(this.btnBuscarUnidad_Click);
             // 
             // uNIDADESTableAdapter
             // 
@@ -449,7 +450,7 @@
             this.Controls.Add(this.dgvTablaUnidad);
             this.Controls.Add(this.btnModificar);
             this.Name = "frmUnidad";
-            this.Text = "frmUnidades";
+            this.Text = "Formulario de Unidades de Transporte";
             this.Load += new System.EventHandler(this.frmUnidad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTablaUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uNIDADESBindingSource)).EndInit();

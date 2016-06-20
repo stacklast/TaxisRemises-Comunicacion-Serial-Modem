@@ -48,12 +48,12 @@
             this.cmbRol = new System.Windows.Forms.ComboBox();
             this.lblID = new System.Windows.Forms.Label();
             this.grbAcciones = new System.Windows.Forms.GroupBox();
-            this.uSUARIOSTableAdapter = new TaxiRemesas.taxisDataSetTableAdapters.USUARIOSTableAdapter();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.uSUARIOSTableAdapter = new TaxiRemesas.taxisDataSetTableAdapters.USUARIOSTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.gvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taxisDataSetBindingSource)).BeginInit();
@@ -237,10 +237,6 @@
             this.grbAcciones.TabStop = false;
             this.grbAcciones.Text = "Acciones";
             // 
-            // uSUARIOSTableAdapter
-            // 
-            this.uSUARIOSTableAdapter.ClearBeforeFill = true;
-            // 
             // btnEliminar
             // 
             this.btnEliminar.Image = global::TaxiRemesas.Properties.Resources.borrar;
@@ -311,6 +307,10 @@
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
+            // uSUARIOSTableAdapter
+            // 
+            this.uSUARIOSTableAdapter.ClearBeforeFill = true;
+            // 
             // frmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,7 +321,7 @@
             this.Controls.Add(this.grbDatosUsuario);
             this.Controls.Add(this.gvUsuarios);
             this.Name = "frmUsuario";
-            this.Text = "frmUsuario";
+            this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.frmUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).EndInit();

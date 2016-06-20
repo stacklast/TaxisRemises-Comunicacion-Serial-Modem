@@ -5,7 +5,6 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace TaxiRemesas
 {
@@ -62,6 +61,8 @@ namespace TaxiRemesas
             conexion.Desconectar();
             return resultado;
         }
+
+       
         #endregion
 
         #region ///---Configuraciones---///
@@ -180,6 +181,23 @@ namespace TaxiRemesas
             cmdact.ExecuteNonQuery();
             conexion.Desconectar();
         }
+        public DataTable ActualizarGridUnidad(string buscar)
+        {
+            string consulta;
+            conexion.Conectar();
+            consulta = "SELECT * from UNIDADES  WHERE PROPIETARIO like '%" + buscar + "%' OR CHOFER like '%" + buscar + "%' OR NUMERO_UNIDAD like '%" + buscar + "%'  AND ESTADO = 'A' ;";
+
+            SqlCommand cmdact = conexion.ObtenerMiConexion().CreateCommand();
+            cmdact.CommandType = CommandType.Text;
+            cmdact.CommandText = consulta;
+            cmdact.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmdact);
+            da.Fill(dt);
+            conexion.Desconectar();
+            return dt;
+        }
+
         #endregion
 
         #region///---CLIENTES---///
@@ -218,6 +236,106 @@ namespace TaxiRemesas
             cmdact.Parameters.AddWithValue("@ESTADO", ESTADO);
             cmdact.ExecuteNonQuery();
             conexion.Desconectar();
+        }
+
+        public DataTable ActualizarGridCliente(string buscar)
+        {
+            string consulta;
+            conexion.Conectar();
+            consulta = "SELECT * from CLIENTES  WHERE TELEFONO like '%" + buscar + "%' OR CELULAR like '%" + buscar + "%' OR NOMBRE like '%" + buscar + "%'  AND ESTADO = 'A' ;";
+
+            SqlCommand cmdact = conexion.ObtenerMiConexion().CreateCommand();
+            cmdact.CommandType = CommandType.Text;
+            cmdact.CommandText = consulta;
+            cmdact.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmdact);
+            da.Fill(dt);
+            conexion.Desconectar();
+            return dt;
+        }
+        public DataTable ActualizarGridClienteTelefono(string telefono)
+        {
+            string consulta;
+            conexion.Conectar();
+            consulta = "SELECT * from CLIENTES  WHERE TELEFONO Like  '" + telefono + "' OR CELULAR like '" + telefono + "'  AND ESTADO = 'A' ;";
+
+            SqlCommand cmdact = conexion.ObtenerMiConexion().CreateCommand();
+            cmdact.CommandType = CommandType.Text;
+            cmdact.CommandText = consulta;
+            cmdact.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmdact);
+            da.Fill(dt);
+            conexion.Desconectar();
+            return dt;
+        }
+        #endregion
+
+        #region //// APLICACION
+        public DataTable ActualizarGridAsignaciones()
+        {
+            string consulta;
+            conexion.Conectar();
+            consulta = "Select TOP 50 TELEFONO ,CELULAR, DIRECCION,REFERENCIA, u.ID_UNIDAD , FECHA from CLIENTES c,  UNIDADES u, ASIGNACIONES a where a.ID_CLIENTE = c.ID_CLIENTE  AND a.ID_UNIDAD = u.ID_UNIDAD ";
+
+            SqlCommand cmdact = conexion.ObtenerMiConexion().CreateCommand();
+            cmdact.CommandType = CommandType.Text;
+            cmdact.CommandText = consulta;
+            cmdact.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmdact);
+            da.Fill(dt);
+            conexion.Desconectar();
+            return dt;
+        }
+
+        public DataTable ActualizarGridAsignacionesBuscar(string valor)
+        {
+            string consulta;
+            conexion.Conectar();
+            consulta = "Select TOP 50 TELEFONO ,CELULAR, DIRECCION,REFERENCIA, u.ID_UNIDAD , " + 
+                       " FECHA from CLIENTES c,  UNIDADES u, ASIGNACIONES a " + 
+                       " where a.ID_CLIENTE = c.ID_CLIENTE  AND a.ID_UNIDAD = u.ID_UNIDAD " +
+                       " AND (TELEFONO = '" + valor + "' OR CELULAR = '" + valor + "' OR  DIRECCION  = '" + valor + "' OR  u.ID_UNIDAD = '" + valor + "')";
+
+            SqlCommand cmdact = conexion.ObtenerMiConexion().CreateCommand();
+            cmdact.CommandType = CommandType.Text;
+            cmdact.CommandText = consulta;
+            cmdact.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmdact);
+            da.Fill(dt);
+            conexion.Desconectar();
+            return dt;
+        }
+
+        public void Inserta_Asignaciones(int ID_UNIDAD, int ID_CLIENTE, DateTime FECHA, DateTime HORA)
+        {
+            conexion.Conectar();
+            SqlCommand cmdact = new SqlCommand();
+            cmdact.CommandText = "Inserta_Asignaciones";
+            cmdact.CommandType = System.Data.CommandType.StoredProcedure;
+            cmdact.Connection = conexion.ObtenerMiConexion();
+
+            cmdact.Parameters.AddWithValue("@ID_UNIDAD", ID_UNIDAD);
+            cmdact.Parameters.AddWithValue("@ID_CLIENTE", ID_CLIENTE);
+            cmdact.Parameters.AddWithValue("@FECHA", FECHA);
+            cmdact.Parameters.AddWithValue("@HORA", HORA);
+
+            cmdact.ExecuteNonQuery();
+            conexion.Desconectar();
+        }
+
+        public String DevuelveNumUnidades()
+        {
+            conexion.Conectar();
+            SqlCommand _comando = new SqlCommand("SELECT MAX(ID_UNIDAD) AS NUM from Unidades ;", conexion.ObtenerMiConexion());
+            SqlDataReader _reader = _comando.ExecuteReader();
+            _reader.Read();
+            String valor = Convert.ToString(_reader["NUM"]);
+            conexion.Desconectar();
+            return valor;
         }
         #endregion
     }

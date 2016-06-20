@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TaxiRemesas
@@ -135,6 +134,17 @@ namespace TaxiRemesas
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             IniciarControles();
+        }
+
+        private void btnBuscarUnidad_Click(object sender, EventArgs e)
+        {
+            try { 
+            
+            dgvTablaUnidad.DataSource = ins.ActualizarGridUnidad(txtBuscarUnidad.Text);
+            }
+            catch(Exception ex){
+                MessageBox.Show("No se han encontrado Datos");
+            }
         }
     }
 }

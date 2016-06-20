@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TaxiRemesas
@@ -16,7 +14,7 @@ namespace TaxiRemesas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Autenticacion());
+            Application.Run(new frmRegistrosLlamadas());
         }
     }
 }

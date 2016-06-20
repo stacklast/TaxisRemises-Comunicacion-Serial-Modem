@@ -117,14 +117,14 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(94, 32);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(135, 20);
             this.txtNombre.TabIndex = 6;
             // 
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(94, 61);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(135, 20);
             this.txtTelefono.TabIndex = 7;
             // 
             // txtDireccion
@@ -147,7 +147,7 @@
             // 
             this.txtCelular.Location = new System.Drawing.Point(94, 99);
             this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(100, 20);
+            this.txtCelular.Size = new System.Drawing.Size(135, 20);
             this.txtCelular.TabIndex = 10;
             // 
             // dgvTablaCliente
@@ -188,36 +188,42 @@
             this.tELEFONODataGridViewTextBoxColumn.DataPropertyName = "TELEFONO";
             this.tELEFONODataGridViewTextBoxColumn.HeaderText = "TELEFONO";
             this.tELEFONODataGridViewTextBoxColumn.Name = "tELEFONODataGridViewTextBoxColumn";
+            this.tELEFONODataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cELULARDataGridViewTextBoxColumn
             // 
             this.cELULARDataGridViewTextBoxColumn.DataPropertyName = "CELULAR";
             this.cELULARDataGridViewTextBoxColumn.HeaderText = "CELULAR";
             this.cELULARDataGridViewTextBoxColumn.Name = "cELULARDataGridViewTextBoxColumn";
+            this.cELULARDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dIRECCIONDataGridViewTextBoxColumn
             // 
             this.dIRECCIONDataGridViewTextBoxColumn.DataPropertyName = "DIRECCION";
             this.dIRECCIONDataGridViewTextBoxColumn.HeaderText = "DIRECCION";
             this.dIRECCIONDataGridViewTextBoxColumn.Name = "dIRECCIONDataGridViewTextBoxColumn";
+            this.dIRECCIONDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // rEFERENCIADataGridViewTextBoxColumn
             // 
             this.rEFERENCIADataGridViewTextBoxColumn.DataPropertyName = "REFERENCIA";
             this.rEFERENCIADataGridViewTextBoxColumn.HeaderText = "REFERENCIA";
             this.rEFERENCIADataGridViewTextBoxColumn.Name = "rEFERENCIADataGridViewTextBoxColumn";
+            this.rEFERENCIADataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nOMBREDataGridViewTextBoxColumn
             // 
             this.nOMBREDataGridViewTextBoxColumn.DataPropertyName = "NOMBRE";
             this.nOMBREDataGridViewTextBoxColumn.HeaderText = "NOMBRE";
             this.nOMBREDataGridViewTextBoxColumn.Name = "nOMBREDataGridViewTextBoxColumn";
+            this.nOMBREDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // eSTADODataGridViewTextBoxColumn
             // 
             this.eSTADODataGridViewTextBoxColumn.DataPropertyName = "ESTADO";
             this.eSTADODataGridViewTextBoxColumn.HeaderText = "ESTADO";
             this.eSTADODataGridViewTextBoxColumn.Name = "eSTADODataGridViewTextBoxColumn";
+            this.eSTADODataGridViewTextBoxColumn.ReadOnly = true;
             this.eSTADODataGridViewTextBoxColumn.Visible = false;
             // 
             // cLIENTESBindingSource
@@ -244,7 +250,7 @@
             this.grbDatosCliente.Controls.Add(this.label1);
             this.grbDatosCliente.Location = new System.Drawing.Point(24, 12);
             this.grbDatosCliente.Name = "grbDatosCliente";
-            this.grbDatosCliente.Size = new System.Drawing.Size(494, 158);
+            this.grbDatosCliente.Size = new System.Drawing.Size(505, 158);
             this.grbDatosCliente.TabIndex = 13;
             this.grbDatosCliente.TabStop = false;
             this.grbDatosCliente.Text = "Datos de Cliente";
@@ -263,33 +269,38 @@
             // 
             // btnBuscarCliente
             // 
-            this.btnBuscarCliente.Location = new System.Drawing.Point(293, 19);
+            this.btnBuscarCliente.Image = global::TaxiRemesas.Properties.Resources.buscar;
+            this.btnBuscarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(278, 15);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarCliente.Size = new System.Drawing.Size(97, 40);
             this.btnBuscarCliente.TabIndex = 21;
             this.btnBuscarCliente.Text = "Buscar";
+            this.btnBuscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // txtBuscarCliente
             // 
-            this.txtBuscarCliente.Location = new System.Drawing.Point(187, 19);
+            this.txtBuscarCliente.Location = new System.Drawing.Point(161, 26);
             this.txtBuscarCliente.Name = "txtBuscarCliente";
-            this.txtBuscarCliente.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscarCliente.Size = new System.Drawing.Size(111, 20);
             this.txtBuscarCliente.TabIndex = 20;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(98, 19);
+            this.label10.Location = new System.Drawing.Point(77, 29);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 13);
+            this.label10.Size = new System.Drawing.Size(78, 13);
             this.label10.TabIndex = 19;
-            this.label10.Text = "Buscar Unidad:";
+            this.label10.Text = "Buscar Cliente:";
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(41, 19);
+            this.lblID.Location = new System.Drawing.Point(24, 29);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(18, 13);
             this.lblID.TabIndex = 0;
@@ -316,7 +327,7 @@
             // 
             this.btnSalir.Image = global::TaxiRemesas.Properties.Resources.salir;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(421, 187);
+            this.btnSalir.Location = new System.Drawing.Point(427, 187);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(108, 39);
             this.btnSalir.TabIndex = 26;
@@ -382,7 +393,7 @@
             this.Controls.Add(this.grbDatosCliente);
             this.Controls.Add(this.dgvTablaCliente);
             this.Name = "frmCliente";
-            this.Text = "frmCliente";
+            this.Text = "Formulario de Clientes";
             this.Load += new System.EventHandler(this.frmCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTablaCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLIENTESBindingSource)).EndInit();

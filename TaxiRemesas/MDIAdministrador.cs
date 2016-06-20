@@ -5,14 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TaxiRemesas
 {
     public partial class MDIAdministrador : Form
     {
-        private int childFormNumber = 0;
         private string user;
 
         public MDIAdministrador()
@@ -57,6 +55,37 @@ namespace TaxiRemesas
             // MessageBox.Show( "Formulario abierto");
         }
 
+        private frmAplicacion formApli = null;
+        private frmAplicacion FormInstanceApli
+        {
+            get
+            {
+                if (formApli == null)
+                {
+                    formApli = new frmAplicacion();
+                    formApli.MdiParent = this;
+                    formApli.Disposed += new EventHandler(formApli_Disposed);
+                    formApli.FormClosed += new FormClosedEventHandler(formApli_FormClosed);
+                    formApli.Load += new EventHandler(formApli_Load);
+
+                }
+
+                return formApli;
+            }
+        }
+        void formApli_Disposed(object sender, EventArgs e)
+        {
+            formApli = null;
+
+        }
+        void formApli_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //MessageBox.Show("Se ha cerrado el Formulario");
+        }
+        void formApli_Load(object sender, EventArgs e)
+        {
+            // MessageBox.Show( "Formulario abierto");
+        }
         
         private frmUsuario formUsr = null;
         private frmUsuario FormInstanceUsr
@@ -262,6 +291,17 @@ namespace TaxiRemesas
         private void timer1_Tick(object sender, EventArgs e)
         {
             mostrarElementos();
+        }
+
+        private void aplicaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAplicacion frmApli = this.FormInstanceApli;
+            // se varifica si el formulario no esta minimizado, en caso de estarlo
+            // se lo cambia a un estado normal
+            if (frmApli.WindowState == FormWindowState.Minimized)
+                frmApli.WindowState = FormWindowState.Normal;
+
+            frmApli.Show();
         }
     }
 }

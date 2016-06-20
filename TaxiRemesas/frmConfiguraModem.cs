@@ -5,10 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
-using PCComm;
 
 
 namespace TaxiRemesas
@@ -103,11 +101,11 @@ namespace TaxiRemesas
         {
             if (rdoHex.Checked == true)
             {
-                comm.CurrentTransmissionType = PCComm.CommunicationManager.TransmissionType.Hex;
+                comm.CurrentTransmissionType = CommunicationManager.TransmissionType.Hex;
             }
             else
             {
-                comm.CurrentTransmissionType = PCComm.CommunicationManager.TransmissionType.Text;
+                comm.CurrentTransmissionType = CommunicationManager.TransmissionType.Text;
             }
         }
 
