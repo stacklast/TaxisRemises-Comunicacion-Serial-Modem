@@ -31,30 +31,44 @@ namespace TaxiRemesas
         {
             InitializeComponent();
         }
+
         public frmRegistrosLlamadas(string numero)
             : this()
         {
-            this.numero = numero;
+
+                this.numero = numero;            
         }
         private void frmRegistrosLlamadas_Load(object sender, EventArgs e)
         {
             InicializaCombo();
-            if(id_asignaciones > 0 )
+            if(numero != "vacio")
             {
-                btnRegistro.Visible = false;
-                btnAsignarUnidad.Visible = true;
-                ActualizarCamposAsignaciones();
+                if (id_asignaciones > 0)
+                {
+                    btnRegistro.Visible = false;
+                    btnAsignarUnidad.Visible = true;
+                    ActualizarCamposAsignaciones();
+                }
+                else
+                {
+
+                    ObtieneNumeroCajas();
+                    mostrarElementos();
+                    btnRegistro.Visible = true;
+                    btnAsignarUnidad.Visible = false;
+                    ActualizarCamposTelefono();
+                    btnRegistro.Enabled = true;
+                }
             }
             else
             {
-
-                ObtieneNumeroCajas();
                 mostrarElementos();
                 btnRegistro.Visible = true;
                 btnAsignarUnidad.Visible = false;
-                ActualizarCamposTelefono();
+                //ActualizarCamposTelefono();
                 btnRegistro.Enabled = true;
             }
+            
             
             
         }
@@ -327,6 +341,26 @@ namespace TaxiRemesas
                 txtDireccionOrigen.Text = "";
             }
 
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloLetras(e);
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
+        }
+
+        private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
+        }
+
+        private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           /* Validaciones.es_domicilio(e);*/
         }
 
     }

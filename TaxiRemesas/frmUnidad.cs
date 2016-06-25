@@ -146,5 +146,10 @@ namespace TaxiRemesas
                 MessageBox.Show("No se han encontrado Datos");
             }
         }
+
+        private void txtNumero_Unidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
+        }
     }
 }

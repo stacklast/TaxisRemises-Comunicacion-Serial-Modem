@@ -18,10 +18,28 @@ namespace TaxiRemesas
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            frmMostrarReporte frmReport = new frmMostrarReporte();
-            frmReport.fecha = dtpFecha.Value;
-            frmReport.fechafin = dtpFecha2.Value;
-            frmReport.Show();
+            if(cmbFiltro.Text == "Direccion")
+            {
+                frmMostrarReporteFiltro frmReport = new frmMostrarReporteFiltro();
+                frmReport.fecha = dtpFecha.Value;
+                frmReport.fechafin = dtpFecha2.Value;
+                frmReport.direccion = txtDireccion.Text;
+                frmReport.Show();
+            }
+            else
+            {
+                frmMostrarReporte frmReport = new frmMostrarReporte();
+                frmReport.fecha = dtpFecha.Value;
+                frmReport.fechafin = dtpFecha2.Value;
+                frmReport.Show();
+            }
+            
+        }
+
+        private void frmReportes_Load(object sender, EventArgs e)
+        {
+            cmbFiltro.Items.Add("Fechas");
+            cmbFiltro.Items.Add("Dirección");
         }
     }
 }

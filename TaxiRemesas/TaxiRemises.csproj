@@ -97,6 +97,12 @@
     <Compile Include="frmConfiguraModem.Designer.cs">
       <DependentUpon>frmConfiguraModem.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMostrarReporteFiltro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMostrarReporteFiltro.Designer.cs">
+      <DependentUpon>frmMostrarReporteFiltro.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMostrarReporte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>taxisDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Validaciones.cs" />
     <EmbeddedResource Include="frmAplicacion.resx">
       <DependentUpon>frmAplicacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConfiguraModem.resx">
       <DependentUpon>frmConfiguraModem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMostrarReporteFiltro.resx">
+      <DependentUpon>frmMostrarReporteFiltro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMostrarReporte.resx">
       <DependentUpon>frmMostrarReporte.cs</DependentUpon>
@@ -195,6 +205,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ReporteAsignaciones.rdlc" />
+    <EmbeddedResource Include="ReporteFiltroDireccion.rdlc" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -314,6 +325,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\calender_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\celular.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

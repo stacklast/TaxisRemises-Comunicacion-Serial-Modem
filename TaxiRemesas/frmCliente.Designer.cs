@@ -71,9 +71,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(24, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.Size = new System.Drawing.Size(61, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombres:";
             // 
@@ -82,25 +83,27 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(235, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(62, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Direccion:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 106);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(24, 97);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.Size = new System.Drawing.Size(49, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Celular:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 64);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(24, 63);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.Size = new System.Drawing.Size(58, 15);
             this.label4.TabIndex = 3;
             this.label4.Text = "Telefono:";
             // 
@@ -109,7 +112,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(235, 89);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
+            this.label5.Size = new System.Drawing.Size(70, 15);
             this.label5.TabIndex = 4;
             this.label5.Text = "Referencia:";
             // 
@@ -117,19 +120,21 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(94, 32);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(135, 20);
+            this.txtNombre.Size = new System.Drawing.Size(135, 21);
             this.txtNombre.TabIndex = 6;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(94, 61);
+            this.txtTelefono.Location = new System.Drawing.Point(94, 65);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(135, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(135, 21);
             this.txtTelefono.TabIndex = 7;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(296, 26);
+            this.txtDireccion.Location = new System.Drawing.Point(304, 26);
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(192, 54);
@@ -137,7 +142,7 @@
             // 
             // txtReferencia
             // 
-            this.txtReferencia.Location = new System.Drawing.Point(296, 86);
+            this.txtReferencia.Location = new System.Drawing.Point(304, 86);
             this.txtReferencia.Multiline = true;
             this.txtReferencia.Name = "txtReferencia";
             this.txtReferencia.Size = new System.Drawing.Size(192, 59);
@@ -145,10 +150,11 @@
             // 
             // txtCelular
             // 
-            this.txtCelular.Location = new System.Drawing.Point(94, 99);
+            this.txtCelular.Location = new System.Drawing.Point(94, 98);
             this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(135, 20);
+            this.txtCelular.Size = new System.Drawing.Size(135, 21);
             this.txtCelular.TabIndex = 10;
+            this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
             // 
             // dgvTablaCliente
             // 
@@ -248,9 +254,10 @@
             this.grbDatosCliente.Controls.Add(this.label3);
             this.grbDatosCliente.Controls.Add(this.label2);
             this.grbDatosCliente.Controls.Add(this.label1);
+            this.grbDatosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbDatosCliente.Location = new System.Drawing.Point(24, 12);
             this.grbDatosCliente.Name = "grbDatosCliente";
-            this.grbDatosCliente.Size = new System.Drawing.Size(505, 158);
+            this.grbDatosCliente.Size = new System.Drawing.Size(511, 158);
             this.grbDatosCliente.TabIndex = 13;
             this.grbDatosCliente.TabStop = false;
             this.grbDatosCliente.Text = "Datos de Cliente";
@@ -261,6 +268,7 @@
             this.groupBox3.Controls.Add(this.txtBuscarCliente);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.lblID);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(24, 176);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(381, 63);
@@ -285,15 +293,15 @@
             // 
             this.txtBuscarCliente.Location = new System.Drawing.Point(161, 26);
             this.txtBuscarCliente.Name = "txtBuscarCliente";
-            this.txtBuscarCliente.Size = new System.Drawing.Size(111, 20);
+            this.txtBuscarCliente.Size = new System.Drawing.Size(111, 21);
             this.txtBuscarCliente.TabIndex = 20;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(77, 29);
+            this.label10.Location = new System.Drawing.Point(65, 29);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 13);
+            this.label10.Size = new System.Drawing.Size(89, 15);
             this.label10.TabIndex = 19;
             this.label10.Text = "Buscar Cliente:";
             // 
@@ -302,7 +310,7 @@
             this.lblID.AutoSize = true;
             this.lblID.Location = new System.Drawing.Point(24, 29);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(18, 13);
+            this.lblID.Size = new System.Drawing.Size(19, 15);
             this.lblID.TabIndex = 0;
             this.lblID.Text = "ID";
             // 
@@ -312,6 +320,7 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = global::TaxiRemesas.Properties.Resources.borrar;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.Location = new System.Drawing.Point(553, 130);
@@ -325,6 +334,7 @@
             // 
             // btnSalir
             // 
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = global::TaxiRemesas.Properties.Resources.salir;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.Location = new System.Drawing.Point(427, 187);
@@ -339,6 +349,7 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = global::TaxiRemesas.Properties.Resources.guardar;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.Location = new System.Drawing.Point(553, 15);
@@ -353,6 +364,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::TaxiRemesas.Properties.Resources.cancel;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(553, 187);
@@ -367,6 +379,7 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Image = global::TaxiRemesas.Properties.Resources.modificar1;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificar.Location = new System.Drawing.Point(553, 76);

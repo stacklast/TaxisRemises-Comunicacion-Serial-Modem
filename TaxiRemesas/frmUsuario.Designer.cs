@@ -67,16 +67,16 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(25, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 13);
+            this.label1.Size = new System.Drawing.Size(29, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Rol:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 76);
+            this.label2.Location = new System.Drawing.Point(25, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.Size = new System.Drawing.Size(53, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Usuario:";
             // 
@@ -85,7 +85,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(237, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.Size = new System.Drawing.Size(73, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Contraseña:";
             // 
@@ -93,7 +93,7 @@
             // 
             this.txtUsuario.Location = new System.Drawing.Point(93, 69);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(121, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(121, 21);
             this.txtUsuario.TabIndex = 5;
             // 
             // txtPass
@@ -101,7 +101,7 @@
             this.txtPass.Location = new System.Drawing.Point(307, 32);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(121, 20);
+            this.txtPass.Size = new System.Drawing.Size(121, 21);
             this.txtPass.TabIndex = 6;
             // 
             // gvUsuarios
@@ -187,6 +187,7 @@
             this.grbDatosUsuario.Controls.Add(this.label3);
             this.grbDatosUsuario.Controls.Add(this.label2);
             this.grbDatosUsuario.Controls.Add(this.label1);
+            this.grbDatosUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbDatosUsuario.Location = new System.Drawing.Point(14, 18);
             this.grbDatosUsuario.Name = "grbDatosUsuario";
             this.grbDatosUsuario.Size = new System.Drawing.Size(447, 133);
@@ -199,7 +200,7 @@
             this.lbl_ID.AutoSize = true;
             this.lbl_ID.Location = new System.Drawing.Point(237, 76);
             this.lbl_ID.Name = "lbl_ID";
-            this.lbl_ID.Size = new System.Drawing.Size(18, 13);
+            this.lbl_ID.Size = new System.Drawing.Size(19, 15);
             this.lbl_ID.TabIndex = 9;
             this.lbl_ID.Text = "ID";
             // 
@@ -211,7 +212,7 @@
             "USUARIO"});
             this.cmbRol.Location = new System.Drawing.Point(93, 31);
             this.cmbRol.Name = "cmbRol";
-            this.cmbRol.Size = new System.Drawing.Size(121, 21);
+            this.cmbRol.Size = new System.Drawing.Size(121, 23);
             this.cmbRol.TabIndex = 8;
             // 
             // lblID
@@ -230,6 +231,7 @@
             this.grbAcciones.Controls.Add(this.btnGuardar);
             this.grbAcciones.Controls.Add(this.btnCancelar);
             this.grbAcciones.Controls.Add(this.btnModificar);
+            this.grbAcciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbAcciones.Location = new System.Drawing.Point(485, 18);
             this.grbAcciones.Name = "grbAcciones";
             this.grbAcciones.Size = new System.Drawing.Size(140, 321);

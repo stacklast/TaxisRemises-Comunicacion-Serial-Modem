@@ -39,10 +39,10 @@
             this.txtBusquedaAsignaciones = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.taxisDataSet = new TaxiRemesas.taxisDataSet();
+            this.btnCelular = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnCelular = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignaciones)).BeginInit();
@@ -165,11 +165,39 @@
             this.taxisDataSet.DataSetName = "taxisDataSet";
             this.taxisDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // btnCelular
+            // 
+            this.btnCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCelular.Image = global::TaxiRemesas.Properties.Resources.celular;
+            this.btnCelular.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCelular.Location = new System.Drawing.Point(561, 68);
+            this.btnCelular.Name = "btnCelular";
+            this.btnCelular.Size = new System.Drawing.Size(94, 79);
+            this.btnCelular.TabIndex = 36;
+            this.btnCelular.Text = "Llamadas a Celular";
+            this.btnCelular.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCelular.UseVisualStyleBackColor = true;
+            this.btnCelular.Click += new System.EventHandler(this.btnCelular_Click);
+            // 
+            // button1
+            // 
+            this.button1.Image = global::TaxiRemesas.Properties.Resources.modificar1;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(8, 126);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 48);
+            this.button1.TabIndex = 35;
+            this.button1.Text = "Refrescar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnSalir
             // 
             this.btnSalir.Image = global::TaxiRemesas.Properties.Resources.salir;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(631, 17);
+            this.btnSalir.Location = new System.Drawing.Point(631, 157);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(120, 39);
             this.btnSalir.TabIndex = 34;
@@ -192,30 +220,6 @@
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // button1
-            // 
-            this.button1.Image = global::TaxiRemesas.Properties.Resources.modificar1;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(676, 155);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 48);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Refrescar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnCelular
-            // 
-            this.btnCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCelular.Location = new System.Drawing.Point(544, 76);
-            this.btnCelular.Name = "btnCelular";
-            this.btnCelular.Size = new System.Drawing.Size(149, 59);
-            this.btnCelular.TabIndex = 36;
-            this.btnCelular.Text = "Llamadas a Celular";
-            this.btnCelular.UseVisualStyleBackColor = true;
             // 
             // frmAplicacion
             // 

@@ -77,9 +77,9 @@
             // lbl_ID
             // 
             this.lbl_ID.AutoSize = true;
-            this.lbl_ID.Location = new System.Drawing.Point(41, 26);
+            this.lbl_ID.Location = new System.Drawing.Point(23, 26);
             this.lbl_ID.Name = "lbl_ID";
-            this.lbl_ID.Size = new System.Drawing.Size(18, 13);
+            this.lbl_ID.Size = new System.Drawing.Size(19, 15);
             this.lbl_ID.TabIndex = 0;
             this.lbl_ID.Text = "ID";
             // 
@@ -88,7 +88,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(18, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.Size = new System.Drawing.Size(70, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Propietario:";
             // 
@@ -97,7 +97,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(18, 57);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.Size = new System.Drawing.Size(46, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Chofer:";
             // 
@@ -106,7 +106,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(456, 55);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.Size = new System.Drawing.Size(60, 15);
             this.label4.TabIndex = 3;
             this.label4.Text = "Unidad #:";
             // 
@@ -115,16 +115,16 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(18, 94);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 13);
+            this.label5.Size = new System.Drawing.Size(77, 15);
             this.label5.TabIndex = 4;
             this.label5.Text = "Autorización:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(254, 29);
+            this.label6.Location = new System.Drawing.Point(281, 26);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.Size = new System.Drawing.Size(41, 15);
             this.label6.TabIndex = 5;
             this.label6.Text = "Placa:";
             // 
@@ -133,16 +133,16 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(456, 29);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 13);
+            this.label7.Size = new System.Drawing.Size(61, 15);
             this.label7.TabIndex = 6;
             this.label7.Text = "Matricula:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(254, 65);
+            this.label8.Location = new System.Drawing.Point(281, 62);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 13);
+            this.label8.Size = new System.Drawing.Size(39, 15);
             this.label8.TabIndex = 7;
             this.label8.Text = "Color:";
             // 
@@ -250,66 +250,67 @@
             // 
             // txtPropietario
             // 
-            this.txtPropietario.Location = new System.Drawing.Point(86, 26);
+            this.txtPropietario.Location = new System.Drawing.Point(97, 26);
             this.txtPropietario.Name = "txtPropietario";
-            this.txtPropietario.Size = new System.Drawing.Size(162, 20);
+            this.txtPropietario.Size = new System.Drawing.Size(162, 21);
             this.txtPropietario.TabIndex = 11;
             // 
             // txtChofer
             // 
-            this.txtChofer.Location = new System.Drawing.Point(86, 55);
+            this.txtChofer.Location = new System.Drawing.Point(97, 55);
             this.txtChofer.Name = "txtChofer";
-            this.txtChofer.Size = new System.Drawing.Size(162, 20);
+            this.txtChofer.Size = new System.Drawing.Size(162, 21);
             this.txtChofer.TabIndex = 12;
             // 
             // txtNumero_Unidad
             // 
             this.txtNumero_Unidad.Location = new System.Drawing.Point(524, 52);
             this.txtNumero_Unidad.Name = "txtNumero_Unidad";
-            this.txtNumero_Unidad.Size = new System.Drawing.Size(100, 20);
+            this.txtNumero_Unidad.Size = new System.Drawing.Size(100, 21);
             this.txtNumero_Unidad.TabIndex = 13;
+            this.txtNumero_Unidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_Unidad_KeyPress);
             // 
             // txtAutorizacion
             // 
-            this.txtAutorizacion.Location = new System.Drawing.Point(86, 90);
+            this.txtAutorizacion.Location = new System.Drawing.Point(97, 90);
             this.txtAutorizacion.Name = "txtAutorizacion";
-            this.txtAutorizacion.Size = new System.Drawing.Size(162, 20);
+            this.txtAutorizacion.Size = new System.Drawing.Size(162, 21);
             this.txtAutorizacion.TabIndex = 14;
             // 
             // txtPlaca
             // 
-            this.txtPlaca.Location = new System.Drawing.Point(322, 26);
+            this.txtPlaca.Location = new System.Drawing.Point(329, 26);
             this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(100, 20);
+            this.txtPlaca.Size = new System.Drawing.Size(100, 21);
             this.txtPlaca.TabIndex = 15;
             // 
             // txtMatricula
             // 
             this.txtMatricula.Location = new System.Drawing.Point(524, 26);
             this.txtMatricula.Name = "txtMatricula";
-            this.txtMatricula.Size = new System.Drawing.Size(100, 20);
+            this.txtMatricula.Size = new System.Drawing.Size(100, 21);
             this.txtMatricula.TabIndex = 16;
             // 
             // txtColor
             // 
-            this.txtColor.Location = new System.Drawing.Point(322, 56);
+            this.txtColor.Location = new System.Drawing.Point(329, 62);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(100, 20);
+            this.txtColor.Size = new System.Drawing.Size(100, 21);
             this.txtColor.TabIndex = 17;
             // 
             // txtBuscarUnidad
             // 
             this.txtBuscarUnidad.Location = new System.Drawing.Point(165, 26);
             this.txtBuscarUnidad.Name = "txtBuscarUnidad";
-            this.txtBuscarUnidad.Size = new System.Drawing.Size(122, 20);
+            this.txtBuscarUnidad.Size = new System.Drawing.Size(122, 21);
             this.txtBuscarUnidad.TabIndex = 20;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(77, 30);
+            this.label10.Location = new System.Drawing.Point(69, 27);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 13);
+            this.label10.Size = new System.Drawing.Size(94, 15);
             this.label10.TabIndex = 19;
             this.label10.Text = "Buscar Usuario:";
             // 
@@ -329,6 +330,7 @@
             this.grbDatosUnidad.Controls.Add(this.label4);
             this.grbDatosUnidad.Controls.Add(this.label3);
             this.grbDatosUnidad.Controls.Add(this.label2);
+            this.grbDatosUnidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbDatosUnidad.Location = new System.Drawing.Point(19, 24);
             this.grbDatosUnidad.Name = "grbDatosUnidad";
             this.grbDatosUnidad.Size = new System.Drawing.Size(630, 130);
@@ -342,6 +344,7 @@
             this.groupBox3.Controls.Add(this.txtBuscarUnidad);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.lbl_ID);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(19, 160);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(439, 63);
@@ -368,6 +371,7 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = global::TaxiRemesas.Properties.Resources.borrar;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.Location = new System.Drawing.Point(665, 117);
@@ -382,6 +386,7 @@
             // 
             // btnSalir
             // 
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = global::TaxiRemesas.Properties.Resources.salir;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.Location = new System.Drawing.Point(533, 173);
@@ -396,6 +401,7 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = global::TaxiRemesas.Properties.Resources.guardar;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.Location = new System.Drawing.Point(665, 2);
@@ -410,6 +416,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::TaxiRemesas.Properties.Resources.cancel;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(665, 174);
@@ -424,6 +431,7 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Image = global::TaxiRemesas.Properties.Resources.modificar1;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificar.Location = new System.Drawing.Point(665, 63);

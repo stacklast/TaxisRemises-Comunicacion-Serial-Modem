@@ -114,9 +114,9 @@ namespace TaxiRemesas
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            /*comm.ClosePort();
+            comm.ClosePort();
             comm2.ClosePort();
-            System.Threading.Thread.Sleep(5000);*/
+            System.Threading.Thread.Sleep(5000);
             this.Close();
         }
 
@@ -157,6 +157,13 @@ namespace TaxiRemesas
         private void button1_Click(object sender, EventArgs e)
         {
             dgvAsignaciones.DataSource = ins.ActualizarGridAsignaciones();
+           
+        }
+
+        private void btnCelular_Click(object sender, EventArgs e)
+        {
+            frmRegistrosLlamadas frmCall = new frmRegistrosLlamadas("vacio");
+            frmCall.Show();
         }
     }
 }

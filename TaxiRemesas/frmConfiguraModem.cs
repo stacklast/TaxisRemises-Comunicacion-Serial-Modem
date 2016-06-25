@@ -140,6 +140,7 @@ namespace TaxiRemesas
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            comm.ClosePort();
             this.Close();
         }
 
