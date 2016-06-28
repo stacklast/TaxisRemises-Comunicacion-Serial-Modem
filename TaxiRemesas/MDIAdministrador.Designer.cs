@@ -53,6 +53,7 @@
             this.aplicaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemReporteFecha = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.grbDatosInfo.SuspendLayout();
@@ -66,10 +67,11 @@
             this.fileMenu,
             this.toolsMenu,
             this.aplicaciónToolStripMenuItem,
-            this.reportesToolStripMenuItem});
+            this.reportesToolStripMenuItem,
+            this.acercaDeToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(912, 109);
+            this.menuStrip.Size = new System.Drawing.Size(956, 109);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -80,7 +82,7 @@
             this.toolStripUser});
             this.statusStrip.Location = new System.Drawing.Point(0, 431);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(912, 22);
+            this.statusStrip.Size = new System.Drawing.Size(956, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
@@ -174,7 +176,7 @@
             this.grbDatosInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbDatosInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbDatosInfo.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.grbDatosInfo.Location = new System.Drawing.Point(467, 4);
+            this.grbDatosInfo.Location = new System.Drawing.Point(526, 0);
             this.grbDatosInfo.Name = "grbDatosInfo";
             this.grbDatosInfo.Size = new System.Drawing.Size(418, 101);
             this.grbDatosInfo.TabIndex = 15;
@@ -252,7 +254,7 @@
             // 
             // clientesToolStripMenuItem
             // 
-            this.clientesToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources._15_clientes;
+            this.clientesToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.cliente;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
@@ -261,7 +263,7 @@
             // aplicaciónToolStripMenuItem
             // 
             this.aplicaciónToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aplicaciónToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.centro_llamadas;
+            this.aplicaciónToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.llamadas;
             this.aplicaciónToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.aplicaciónToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.aplicaciónToolStripMenuItem.Name = "aplicaciónToolStripMenuItem";
@@ -294,11 +296,23 @@
             this.toolStripMenuItemReporteFecha.Text = "Reporte de Llamadas";
             this.toolStripMenuItemReporteFecha.Click += new System.EventHandler(this.toolStripMenuItemReporteFecha_Click);
             // 
+            // acercaDeToolStripMenuItem
+            // 
+            this.acercaDeToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.info;
+            this.acercaDeToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.acercaDeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(77, 105);
+            this.acercaDeToolStripMenuItem.Text = "Acerca de..";
+            this.acercaDeToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.acercaDeToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
+            // 
             // MDIAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 453);
+            this.ClientSize = new System.Drawing.Size(956, 453);
             this.Controls.Add(this.grbDatosInfo);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.statusStrip);
@@ -346,6 +360,7 @@
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemReporteFecha;
+        private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
     }
 }
 

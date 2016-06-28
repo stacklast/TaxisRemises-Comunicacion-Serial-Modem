@@ -349,5 +349,11 @@ namespace TaxiRemesas
 
             frmReport.Show();
         }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox Acerca = new AboutBox();
+            Acerca.ShowDialog();
+        }
     }
 }

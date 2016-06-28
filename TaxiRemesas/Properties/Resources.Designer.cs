@@ -63,26 +63,6 @@ namespace TaxiRemesas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _15_clientes {
-            get {
-                object obj = ResourceManager.GetObject("15-clientes", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _430_ciber_seguridad_ap {
-            get {
-                object obj = ResourceManager.GetObject("430-ciber-seguridad-ap", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap borrar {
             get {
                 object obj = ResourceManager.GetObject("borrar", resourceCulture);
@@ -143,9 +123,9 @@ namespace TaxiRemesas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap centro_llamadas {
+        internal static System.Drawing.Bitmap cliente {
             get {
-                object obj = ResourceManager.GetObject("centro-llamadas", resourceCulture);
+                object obj = ResourceManager.GetObject("cliente", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +203,9 @@ namespace TaxiRemesas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap HP_MSN_Dock_512 {
+        internal static System.Drawing.Bitmap info {
             get {
-                object obj = ResourceManager.GetObject("HP-MSN-Dock-512", resourceCulture);
+                object obj = ResourceManager.GetObject("info", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +213,19 @@ namespace TaxiRemesas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Mantenimiento {
+        internal static System.Drawing.Bitmap llamadas {
             get {
-                object obj = ResourceManager.GetObject("Mantenimiento", resourceCulture);
+                object obj = ResourceManager.GetObject("llamadas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login {
+            get {
+                object obj = ResourceManager.GetObject("login", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

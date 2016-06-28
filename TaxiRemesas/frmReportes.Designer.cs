@@ -141,7 +141,7 @@
             // 
             this.txtDireccion.Location = new System.Drawing.Point(107, 145);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(306, 22);
+            this.txtDireccion.Size = new System.Drawing.Size(318, 22);
             this.txtDireccion.TabIndex = 8;
             // 
             // btnGenerar

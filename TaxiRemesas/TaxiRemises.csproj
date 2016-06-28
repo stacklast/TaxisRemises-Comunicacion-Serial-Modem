@@ -71,6 +71,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="CommunicationManager.cs" />
     <Compile Include="frmAplicacion.cs">
       <SubType>Form</SubType>
@@ -158,6 +164,9 @@
       <DependentUpon>taxisDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Validaciones.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAplicacion.resx">
       <DependentUpon>frmAplicacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,6 +337,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\celular.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

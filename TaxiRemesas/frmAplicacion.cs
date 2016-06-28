@@ -126,7 +126,7 @@ namespace TaxiRemesas
                 dgvAsignaciones.DataSource = ins.ActualizarGridAsignacionesBuscar(txtBusquedaAsignaciones.Text);
             }
             catch(Exception ex){
-                MessageBox.Show("No se ha Encontrado Datos");
+                MessageBox.Show("No se ha Encontrado Datos " + ex.ToString());
             }
         }
 

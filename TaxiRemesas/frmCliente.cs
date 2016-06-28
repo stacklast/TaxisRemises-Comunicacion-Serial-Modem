@@ -119,7 +119,7 @@ namespace TaxiRemesas
                 dgvTablaCliente.DataSource = ins.ActualizarGridCliente(txtBuscarCliente.Text);
             }
             catch(Exception ex){
-                MessageBox.Show("No se han encontrado Datos");
+                MessageBox.Show("No se han encontrado Datos " +ex.ToString());
             }
             
         }

@@ -89,7 +89,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::TaxiRemesas.Properties.Resources.HP_MSN_Dock_512;
+            this.pictureBox1.Image = global::TaxiRemesas.Properties.Resources.login;
             this.pictureBox1.Location = new System.Drawing.Point(12, 35);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(174, 160);

@@ -326,7 +326,7 @@ namespace TaxiRemesas
             }
             catch(Exception ex)
             {
-                MessageBox.Show("No se ha podido agregar la Unidad");
+                MessageBox.Show("No se ha podido agregar la Unidad " + ex.ToString());
             }
             frmAplicacion.f1.refrescar();
         }
