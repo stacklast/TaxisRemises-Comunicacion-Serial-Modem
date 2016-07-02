@@ -236,6 +236,7 @@
             this.txtReferencia.Name = "txtReferencia";
             this.txtReferencia.Size = new System.Drawing.Size(264, 77);
             this.txtReferencia.TabIndex = 9;
+            this.txtReferencia.TextChanged += new System.EventHandler(this.txtReferencia_TextChanged);
             // 
             // txtDireccionOrigen
             // 
@@ -244,6 +245,7 @@
             this.txtDireccionOrigen.Name = "txtDireccionOrigen";
             this.txtDireccionOrigen.Size = new System.Drawing.Size(264, 77);
             this.txtDireccionOrigen.TabIndex = 8;
+            this.txtDireccionOrigen.TextChanged += new System.EventHandler(this.txtDireccionOrigen_TextChanged);
             // 
             // txtDireccion
             // 
@@ -252,6 +254,7 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(264, 77);
             this.txtDireccion.TabIndex = 8;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
             // txtTelefono
             // 

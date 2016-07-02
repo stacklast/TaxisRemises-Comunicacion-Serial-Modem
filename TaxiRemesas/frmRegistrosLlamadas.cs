@@ -238,6 +238,10 @@ namespace TaxiRemesas
                 string direccion = txtDireccion.Text;
                 string referecia = txtReferencia.Text;
 
+                if(telefono == "")
+                {
+                    telefono = celular;
+                }
                 ins.Inserta_Cliente(telefono, celular, direccion, referecia, nombre);
                 // TODO: esta línea de código carga datos en la tabla 'taxisDataSet.CLIENTES' Puede moverla o quitarla según sea necesario.
 
@@ -361,6 +365,25 @@ namespace TaxiRemesas
         private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
         {
            /* Validaciones.es_domicilio(e);*/
+        }
+
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+            txtDireccion.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToUpper(txtDireccion.Text);
+            txtDireccion.SelectionStart = txtDireccion.Text.Length;
+
+        }
+
+        private void txtReferencia_TextChanged(object sender, EventArgs e)
+        {
+            txtReferencia.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToUpper(txtReferencia.Text);
+            txtReferencia.SelectionStart = txtReferencia.Text.Length;
+        }
+
+        private void txtDireccionOrigen_TextChanged(object sender, EventArgs e)
+        {
+            txtDireccionOrigen.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToUpper(txtDireccionOrigen.Text);
+            txtDireccionOrigen.SelectionStart = txtDireccionOrigen.Text.Length;
         }
 
     }

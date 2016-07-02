@@ -41,6 +41,7 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aplicaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grbDatosInfo = new System.Windows.Forms.GroupBox();
             this.lblNombreMaquina = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.lblHoraActual = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.grbDatosInfo.SuspendLayout();
@@ -169,6 +169,19 @@
             this.reportesToolStripMenuItem.Visible = false;
             this.reportesToolStripMenuItem.Click += new System.EventHandler(this.reportesToolStripMenuItem_Click);
             // 
+            // acercaDeToolStripMenuItem
+            // 
+            this.acercaDeToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.info;
+            this.acercaDeToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.acercaDeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(81, 108);
+            this.acercaDeToolStripMenuItem.Text = "Acerca De...";
+            this.acercaDeToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.acercaDeToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.acercaDeToolStripMenuItem.Visible = false;
+            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
+            // 
             // grbDatosInfo
             // 
             this.grbDatosInfo.BackColor = System.Drawing.Color.DarkCyan;
@@ -258,18 +271,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // acercaDeToolStripMenuItem
-            // 
-            this.acercaDeToolStripMenuItem.Image = global::TaxiRemesas.Properties.Resources.info;
-            this.acercaDeToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.acercaDeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(81, 108);
-            this.acercaDeToolStripMenuItem.Text = "Acerca De...";
-            this.acercaDeToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.acercaDeToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // MDIUsuario
             // 

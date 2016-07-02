@@ -277,7 +277,7 @@ namespace TaxiRemesas
         {
             string consulta;
             conexion.Conectar();
-            consulta = "Select ID_ASIGNACIONES AS NUM, TELEFONO ,/*CELULAR,*/ DIRECCION_ORIGEN,REFERENCIA, a.ID_UNIDAD , FECHA from CLIENTES c,  /*UNIDADES u,*/ ASIGNACIONES a where a.ID_CLIENTE = c.ID_CLIENTE  /*AND (a.ID_UNIDAD = u.ID_UNIDAD)*/  AND FECHA BETWEEN CONVERT(datetime, DATEADD(DAY, -1, GETDATE())) AND CONVERT(datetime,  GETDATE()) ";
+            consulta = "Select ID_ASIGNACIONES AS NUM, TELEFONO ,/*CELULAR,*/ DIRECCION_ORIGEN,REFERENCIA, a.ID_UNIDAD , FECHA from CLIENTES c,  /*UNIDADES u,*/ ASIGNACIONES a where a.ID_CLIENTE = c.ID_CLIENTE  /*AND (a.ID_UNIDAD = u.ID_UNIDAD)*/  AND FECHA BETWEEN CONVERT(datetime, DATEADD(DAY, -1, GETDATE())) AND CONVERT(datetime,  GETDATE()) ORDER BY ID_ASIGNACIONES DESC";
 
             SqlCommand cmdact = conexion.ObtenerMiConexion().CreateCommand();
             cmdact.CommandType = CommandType.Text;

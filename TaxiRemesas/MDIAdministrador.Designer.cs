@@ -31,6 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDIAdministrador));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.módemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aplicaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemReporteFecha = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripUser = new System.Windows.Forms.ToolStripStatusLabel();
@@ -43,17 +54,6 @@
             this.lblHoraActual = new System.Windows.Forms.Label();
             this.grbDatosInfo = new System.Windows.Forms.GroupBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.módemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.unidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aplicaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemReporteFecha = new System.Windows.Forms.ToolStripMenuItem();
-            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.grbDatosInfo.SuspendLayout();
@@ -74,119 +74,6 @@
             this.menuStrip.Size = new System.Drawing.Size(956, 109);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
-            // 
-            // statusStrip
-            // 
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel,
-            this.toolStripUser});
-            this.statusStrip.Location = new System.Drawing.Point(0, 431);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(956, 22);
-            this.statusStrip.TabIndex = 2;
-            this.statusStrip.Text = "StatusStrip";
-            // 
-            // toolStripStatusLabel
-            // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(50, 17);
-            this.toolStripStatusLabel.Text = "Usuario:";
-            // 
-            // toolStripUser
-            // 
-            this.toolStripUser.Name = "toolStripUser";
-            this.toolStripUser.Size = new System.Drawing.Size(46, 17);
-            this.toolStripUser.Text = "usuario";
-            // 
-            // lblNombreMaquina
-            // 
-            this.lblNombreMaquina.AutoSize = true;
-            this.lblNombreMaquina.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombreMaquina.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreMaquina.Location = new System.Drawing.Point(47, 21);
-            this.lblNombreMaquina.Name = "lblNombreMaquina";
-            this.lblNombreMaquina.Size = new System.Drawing.Size(59, 13);
-            this.lblNombreMaquina.TabIndex = 11;
-            this.lblNombreMaquina.Text = "Máquina:";
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.BackColor = System.Drawing.Color.Transparent;
-            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(139, 70);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(59, 20);
-            this.lblFecha.TabIndex = 4;
-            this.lblFecha.Text = "Fecha";
-            // 
-            // lblFechaActual
-            // 
-            this.lblFechaActual.AutoSize = true;
-            this.lblFechaActual.BackColor = System.Drawing.Color.Transparent;
-            this.lblFechaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaActual.Location = new System.Drawing.Point(47, 77);
-            this.lblFechaActual.Name = "lblFechaActual";
-            this.lblFechaActual.Size = new System.Drawing.Size(46, 13);
-            this.lblFechaActual.TabIndex = 12;
-            this.lblFechaActual.Text = "Fecha:";
-            // 
-            // lblMaquina
-            // 
-            this.lblMaquina.AutoSize = true;
-            this.lblMaquina.BackColor = System.Drawing.Color.Transparent;
-            this.lblMaquina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaquina.Location = new System.Drawing.Point(140, 16);
-            this.lblMaquina.Name = "lblMaquina";
-            this.lblMaquina.Size = new System.Drawing.Size(71, 20);
-            this.lblMaquina.TabIndex = 5;
-            this.lblMaquina.Text = "Nombre";
-            // 
-            // lblHora
-            // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.BackColor = System.Drawing.Color.Transparent;
-            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(139, 41);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(88, 24);
-            this.lblHora.TabIndex = 8;
-            this.lblHora.Text = "00:00:00";
-            // 
-            // lblHoraActual
-            // 
-            this.lblHoraActual.AutoSize = true;
-            this.lblHoraActual.BackColor = System.Drawing.Color.Transparent;
-            this.lblHoraActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoraActual.Location = new System.Drawing.Point(47, 49);
-            this.lblHoraActual.Name = "lblHoraActual";
-            this.lblHoraActual.Size = new System.Drawing.Size(38, 13);
-            this.lblHoraActual.TabIndex = 10;
-            this.lblHoraActual.Text = "Hora:";
-            // 
-            // grbDatosInfo
-            // 
-            this.grbDatosInfo.BackColor = System.Drawing.Color.DarkCyan;
-            this.grbDatosInfo.Controls.Add(this.lblNombreMaquina);
-            this.grbDatosInfo.Controls.Add(this.lblFecha);
-            this.grbDatosInfo.Controls.Add(this.lblFechaActual);
-            this.grbDatosInfo.Controls.Add(this.lblMaquina);
-            this.grbDatosInfo.Controls.Add(this.lblHora);
-            this.grbDatosInfo.Controls.Add(this.lblHoraActual);
-            this.grbDatosInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grbDatosInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbDatosInfo.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.grbDatosInfo.Location = new System.Drawing.Point(526, 0);
-            this.grbDatosInfo.Name = "grbDatosInfo";
-            this.grbDatosInfo.Size = new System.Drawing.Size(418, 101);
-            this.grbDatosInfo.TabIndex = 15;
-            this.grbDatosInfo.TabStop = false;
-            this.grbDatosInfo.Text = "Datos Informativos";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // fileMenu
             // 
@@ -306,7 +193,121 @@
             this.acercaDeToolStripMenuItem.Text = "Acerca de..";
             this.acercaDeToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.acercaDeToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.acercaDeToolStripMenuItem.Visible = false;
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
+            // 
+            // statusStrip
+            // 
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel,
+            this.toolStripUser});
+            this.statusStrip.Location = new System.Drawing.Point(0, 431);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(956, 22);
+            this.statusStrip.TabIndex = 2;
+            this.statusStrip.Text = "StatusStrip";
+            // 
+            // toolStripStatusLabel
+            // 
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(50, 17);
+            this.toolStripStatusLabel.Text = "Usuario:";
+            // 
+            // toolStripUser
+            // 
+            this.toolStripUser.Name = "toolStripUser";
+            this.toolStripUser.Size = new System.Drawing.Size(46, 17);
+            this.toolStripUser.Text = "usuario";
+            // 
+            // lblNombreMaquina
+            // 
+            this.lblNombreMaquina.AutoSize = true;
+            this.lblNombreMaquina.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombreMaquina.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreMaquina.Location = new System.Drawing.Point(47, 21);
+            this.lblNombreMaquina.Name = "lblNombreMaquina";
+            this.lblNombreMaquina.Size = new System.Drawing.Size(59, 13);
+            this.lblNombreMaquina.TabIndex = 11;
+            this.lblNombreMaquina.Text = "Máquina:";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.BackColor = System.Drawing.Color.Transparent;
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(139, 70);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(59, 20);
+            this.lblFecha.TabIndex = 4;
+            this.lblFecha.Text = "Fecha";
+            // 
+            // lblFechaActual
+            // 
+            this.lblFechaActual.AutoSize = true;
+            this.lblFechaActual.BackColor = System.Drawing.Color.Transparent;
+            this.lblFechaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaActual.Location = new System.Drawing.Point(47, 77);
+            this.lblFechaActual.Name = "lblFechaActual";
+            this.lblFechaActual.Size = new System.Drawing.Size(46, 13);
+            this.lblFechaActual.TabIndex = 12;
+            this.lblFechaActual.Text = "Fecha:";
+            // 
+            // lblMaquina
+            // 
+            this.lblMaquina.AutoSize = true;
+            this.lblMaquina.BackColor = System.Drawing.Color.Transparent;
+            this.lblMaquina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaquina.Location = new System.Drawing.Point(140, 16);
+            this.lblMaquina.Name = "lblMaquina";
+            this.lblMaquina.Size = new System.Drawing.Size(71, 20);
+            this.lblMaquina.TabIndex = 5;
+            this.lblMaquina.Text = "Nombre";
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.BackColor = System.Drawing.Color.Transparent;
+            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.Location = new System.Drawing.Point(139, 41);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(88, 24);
+            this.lblHora.TabIndex = 8;
+            this.lblHora.Text = "00:00:00";
+            // 
+            // lblHoraActual
+            // 
+            this.lblHoraActual.AutoSize = true;
+            this.lblHoraActual.BackColor = System.Drawing.Color.Transparent;
+            this.lblHoraActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoraActual.Location = new System.Drawing.Point(47, 49);
+            this.lblHoraActual.Name = "lblHoraActual";
+            this.lblHoraActual.Size = new System.Drawing.Size(38, 13);
+            this.lblHoraActual.TabIndex = 10;
+            this.lblHoraActual.Text = "Hora:";
+            // 
+            // grbDatosInfo
+            // 
+            this.grbDatosInfo.BackColor = System.Drawing.Color.DarkCyan;
+            this.grbDatosInfo.Controls.Add(this.lblNombreMaquina);
+            this.grbDatosInfo.Controls.Add(this.lblFecha);
+            this.grbDatosInfo.Controls.Add(this.lblFechaActual);
+            this.grbDatosInfo.Controls.Add(this.lblMaquina);
+            this.grbDatosInfo.Controls.Add(this.lblHora);
+            this.grbDatosInfo.Controls.Add(this.lblHoraActual);
+            this.grbDatosInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.grbDatosInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbDatosInfo.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.grbDatosInfo.Location = new System.Drawing.Point(526, 0);
+            this.grbDatosInfo.Name = "grbDatosInfo";
+            this.grbDatosInfo.Size = new System.Drawing.Size(418, 101);
+            this.grbDatosInfo.TabIndex = 15;
+            this.grbDatosInfo.TabStop = false;
+            this.grbDatosInfo.Text = "Datos Informativos";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // MDIAdministrador
             // 
