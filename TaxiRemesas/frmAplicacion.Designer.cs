@@ -170,7 +170,7 @@
             this.btnCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCelular.Image = global::TaxiRemesas.Properties.Resources.celular;
             this.btnCelular.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCelular.Location = new System.Drawing.Point(561, 68);
+            this.btnCelular.Location = new System.Drawing.Point(561, 54);
             this.btnCelular.Name = "btnCelular";
             this.btnCelular.Size = new System.Drawing.Size(94, 79);
             this.btnCelular.TabIndex = 36;

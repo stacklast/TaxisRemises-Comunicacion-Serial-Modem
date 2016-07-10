@@ -337,10 +337,11 @@ namespace TaxiRemesas
             {
                 //first check if the port is already open
                 //if its open then close it
-                if (comPort.IsOpen == true) comPort.Close();
-
-                DisplayData(MessageType.Normal, "Puerto Cerrado a  " + DateTime.Now + "\n");
-
+                if (comPort.IsOpen == true) 
+                {
+                    comPort.Close();
+                    DisplayData(MessageType.Normal, "Puerto Cerrado a  " + DateTime.Now + "\n");
+                }
                 //return true
                 return true;
             }

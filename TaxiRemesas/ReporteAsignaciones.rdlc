@@ -12,18 +12,18 @@
               <Width>1.75347in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.79514in</Width>
+              <Width>4.28473in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.90625in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.1875in</Width>
+              <Width>2.59375in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.55729in</Height>
+              <Height>0.24479in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -35,7 +35,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>NUM</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -65,7 +67,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>TELEFONO</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -95,7 +99,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>DIRECCION ORIGEN</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -125,7 +131,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>ID UNIDAD</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -155,7 +163,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>FECHA</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -356,8 +366,8 @@
         <DataSetName>DataSetTaxi</DataSetName>
         <Top>0.22792in</Top>
         <Left>0.33208in</Left>
-        <Height>1.11458in</Height>
-        <Width>8.28125in</Width>
+        <Height>0.80208in</Height>
+        <Width>10.08334in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -368,7 +378,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>8.7175in</Width>
+  <Width>10.41542in</Width>
   <Page>
     <PageHeader>
       <Height>1in</Height>
@@ -394,8 +404,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox18</rd:DefaultName>
-          <Top>0.61333in</Top>
-          <Left>3.30083in</Left>
+          <Top>0.50916in</Top>
+          <Left>3.9675in</Left>
           <Height>0.25in</Height>
           <Width>2.94792in</Width>
           <Style>

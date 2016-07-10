@@ -31,9 +31,15 @@ namespace TaxiRemesas
             
             try
             {
-                dgvAsignaciones.DataSource = ins.ActualizarGridAsignaciones();
-
-
+                if (ins.ActualizarGridAsignaciones().Rows.Count == 0)
+                {
+                    //DataSet is empty
+                }
+                else
+                {
+                    dgvAsignaciones.DataSource = ins.ActualizarGridAsignaciones();
+                }
+                
                 conexion.Conectar();
                 SqlCommand comando = new SqlCommand("Select * from CONFIGURACIONES where PUERTO = 'COM3';", conexion.ObtenerMiConexion());
 

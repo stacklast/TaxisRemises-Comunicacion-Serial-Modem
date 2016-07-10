@@ -12,13 +12,13 @@
               <Width>1.32083in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.24792in</Width>
+              <Width>4.93542in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.32083in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.32083in</Width>
+              <Width>2.15459in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -35,7 +35,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>NUM</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -65,7 +67,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>TELEFONO</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -95,7 +99,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>DIRECCION ORIGEN</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -125,7 +131,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>ID UNIDAD</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -155,7 +163,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>FECHA</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -357,7 +367,7 @@
         <Top>0.75917in</Top>
         <Left>0.20667in</Left>
         <Height>0.5in</Height>
-        <Width>6.76042in</Width>
+        <Width>10.28167in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -371,7 +381,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>REPORTE DE ASIGNACIONES</Value>
+                <Value>REPORTE DE ASIGNACIONES FILTRADO POR DIRECCIÓN</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -384,9 +394,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox18</rd:DefaultName>
         <Top>0.17708in</Top>
-        <Left>2.0775in</Left>
+        <Left>3.21916in</Left>
         <Height>0.25in</Height>
-        <Width>2.94792in</Width>
+        <Width>5.11459in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -402,7 +412,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>7.10292in</Width>
+  <Width>10.48834in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>

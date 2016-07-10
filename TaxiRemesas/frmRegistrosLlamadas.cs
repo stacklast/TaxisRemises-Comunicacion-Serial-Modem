@@ -81,7 +81,7 @@ namespace TaxiRemesas
         }
         public void InicializaCombo()
         {
-            int num = Convert.ToInt32(ins.DevuelveNumUnidades());
+            int num = ins.DevuelveNumUnidades();
             if (num > 0)
             {
                 for (int i = 1; i <= num; i++)
@@ -242,6 +242,10 @@ namespace TaxiRemesas
                 {
                     telefono = celular;
                 }
+                if(direccion == "")
+                {
+                    direccion = txtDireccionOrigen.Text;
+                }
                 ins.Inserta_Cliente(telefono, celular, direccion, referecia, nombre);
                 // TODO: esta línea de código carga datos en la tabla 'taxisDataSet.CLIENTES' Puede moverla o quitarla según sea necesario.
 
@@ -325,6 +329,32 @@ namespace TaxiRemesas
             try
             {
                 ins.Actualiza_Asignaciones(Convert.ToInt32(this.id_asignaciones), Convert.ToInt32(cmbUnidad.Text), txtDireccionOrigen.Text);
+
+                string direccion = txtDireccion.Text;
+                string telefono = txtTelefono.Text;
+                if (telefono == "")
+                {
+                    string nombre = txtNombre.Text;
+                    
+                    string celular = txtCelular.Text;
+                    
+                    string referecia = txtReferencia.Text;
+                    int id = Convert.ToInt32(lblIDCli.Text);
+                    telefono = celular;
+                    ins.Actualiza_Cliente(id, telefono, celular, direccion, referecia, nombre, 'A');
+                }
+                if (direccion == "")
+                {
+                    string nombre = txtNombre.Text;
+                    
+                    string celular = txtCelular.Text;
+                  
+                    string referecia = txtReferencia.Text;
+                    int id = Convert.ToInt32(lblIDCli.Text);
+                    direccion = txtDireccionOrigen.Text;
+                    ins.Actualiza_Cliente(id, telefono, celular, direccion, referecia, nombre, 'A');
+                }
+                
                 MessageBox.Show("Se ha agregado la Unidad " + cmbUnidad.Text + " a la llamada telefónica");
 
             }

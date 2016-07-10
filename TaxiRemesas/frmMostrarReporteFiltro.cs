@@ -21,6 +21,7 @@ namespace TaxiRemesas
         public String direccion { get; set; }
         private void frmMostrarReporte_Load(object sender, EventArgs e)
         {
+            this.taxisDataSet.EnforceConstraints = false;
             // TODO: esta línea de código carga datos en la tabla 'taxisDataSet.Reporte_Llamadas' Puede moverla o quitarla según sea necesario.
             this.Reporte_Llamadas_DireccionTableAdapter.Fill(this.taxisDataSet.Reporte_Llamadas_Direccion, fecha, fechafin, direccion);
 

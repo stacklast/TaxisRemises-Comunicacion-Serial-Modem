@@ -219,7 +219,7 @@ namespace TaxiRemesas
             cmdact.ExecuteNonQuery();
             conexion.Desconectar();
         }
-        public void Actualiza_Cliente(int CLI_ID, string TELEFONO, string CELULAR, string DIRECCION, string REFERENCIA,
+        public void Actualiza_Cliente(int ID_CLIENTE, string TELEFONO, string CELULAR, string DIRECCION, string REFERENCIA,
             string NOMBRE, char ESTADO)
         {
             conexion.Conectar();
@@ -227,7 +227,7 @@ namespace TaxiRemesas
             cmdact.CommandText = "Actualiza_Cliente";
             cmdact.CommandType = System.Data.CommandType.StoredProcedure;
             cmdact.Connection = conexion.ObtenerMiConexion();
-            cmdact.Parameters.AddWithValue("@CLI_ID", CLI_ID);
+            cmdact.Parameters.AddWithValue("@ID_CLIENTE", ID_CLIENTE);
             cmdact.Parameters.AddWithValue("@TELEFONO", TELEFONO);
             cmdact.Parameters.AddWithValue("@CELULAR", CELULAR);
             cmdact.Parameters.AddWithValue("@DIRECCION", DIRECCION);
@@ -294,10 +294,21 @@ namespace TaxiRemesas
         {
             string consulta;
             conexion.Conectar();
-            consulta = "Select ID_ASIGNACIONES AS NUM, TELEFONO ,/*CELULAR,*/ DIRECCION,REFERENCIA, a.ID_UNIDAD AS NUM_UNIDAD , " + 
-                       " FECHA from CLIENTES c,  UNIDADES u, ASIGNACIONES a " + 
+            if (IsNumeric(valor))
+            {
+                consulta = "Select ID_ASIGNACIONES AS NUM, TELEFONO ,/*CELULAR,*/ DIRECCION,REFERENCIA, a.ID_UNIDAD AS NUM_UNIDAD , " +
+                       " FECHA from CLIENTES c,  UNIDADES u, ASIGNACIONES a " +
                        " where a.ID_CLIENTE = c.ID_CLIENTE  AND a.ID_UNIDAD = u.ID_UNIDAD " +
-                       " AND (TELEFONO = '" + valor + "' OR CELULAR = '" + valor + "' OR  DIRECCION  = '" + valor + "' OR  u.ID_UNIDAD = '" + valor + "')";
+                       " AND (TELEFONO = '" + valor + "' OR CELULAR = '" + valor + "' OR  u.ID_UNIDAD = " + valor + ")";
+            }
+            else
+            {
+                consulta = "Select ID_ASIGNACIONES AS NUM, TELEFONO ,/*CELULAR,*/ DIRECCION, REFERENCIA, a.ID_UNIDAD AS NUM_UNIDAD , " +
+                       " FECHA from CLIENTES c,  UNIDADES u, ASIGNACIONES a " +
+                       " where a.ID_CLIENTE = c.ID_CLIENTE  AND a.ID_UNIDAD = u.ID_UNIDAD " +
+                       " AND (DIRECCION  LIKE '%" + valor + "%')";
+            }
+            
 
             SqlCommand cmdact = conexion.ObtenerMiConexion().CreateCommand();
             cmdact.CommandType = CommandType.Text;
@@ -309,7 +320,13 @@ namespace TaxiRemesas
             conexion.Desconectar();
             return dt;
         }
-
+        public static bool IsNumeric(string dato)
+        {
+              bool isNumber;
+              double isItNumeric;
+              isNumber = Double.TryParse(Convert.ToString(dato), System.Globalization.NumberStyles.Any, System.Globalization.NumberFormatInfo.InvariantInfo, out isItNumeric);
+              return isNumber;
+        }
         public DataTable ActualizarGridAsignacionesBuscarID(string id_asignaciones)
         {
             string consulta;
@@ -372,13 +389,25 @@ namespace TaxiRemesas
             conexion.Desconectar();
         }
 
-        public String DevuelveNumUnidades()
+        public int DevuelveNumUnidades()
         {
             conexion.Conectar();
             SqlCommand _comando = new SqlCommand("SELECT MAX(ID_UNIDAD) AS NUM from Unidades ;", conexion.ObtenerMiConexion());
             SqlDataReader _reader = _comando.ExecuteReader();
             _reader.Read();
-            String valor = Convert.ToString(_reader["NUM"]);
+            int valor = 0;
+            if (_reader.HasRows)
+            {
+                if (_reader["NUM"] == DBNull.Value)
+                {
+                    valor = 0;
+                }
+                else
+                {
+                    valor = Convert.ToInt32(_reader["NUM"]);
+                }
+               
+            }
             conexion.Desconectar();
             return valor;
         }

@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.taxisDataSet = new TaxiRemesas.taxisDataSet();
             this.Reporte_LlamadasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.taxisDataSet = new TaxiRemesas.taxisDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Reporte_LlamadasTableAdapter = new TaxiRemesas.taxisDataSetTableAdapters.Reporte_LlamadasTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.taxisDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Reporte_LlamadasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taxisDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Reporte_LlamadasBindingSource
+            // 
+            this.Reporte_LlamadasBindingSource.DataMember = "Reporte_Llamadas";
+            this.Reporte_LlamadasBindingSource.DataSource = this.taxisDataSet;
+            // 
+            // taxisDataSet
+            // 
+            this.taxisDataSet.DataSetName = "taxisDataSet";
+            this.taxisDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -47,18 +57,8 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "TaxiRemesas.ReporteAsignaciones.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(858, 564);
+            this.reportViewer1.Size = new System.Drawing.Size(1024, 564);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // taxisDataSet
-            // 
-            this.taxisDataSet.DataSetName = "taxisDataSet";
-            this.taxisDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Reporte_LlamadasBindingSource
-            // 
-            this.Reporte_LlamadasBindingSource.DataMember = "Reporte_Llamadas";
-            this.Reporte_LlamadasBindingSource.DataSource = this.taxisDataSet;
             // 
             // Reporte_LlamadasTableAdapter
             // 
@@ -68,13 +68,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 564);
+            this.ClientSize = new System.Drawing.Size(1024, 564);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmMostrarReporte";
             this.Text = "Mostrar Reporte";
             this.Load += new System.EventHandler(this.frmMostrarReporte_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.taxisDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Reporte_LlamadasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taxisDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
